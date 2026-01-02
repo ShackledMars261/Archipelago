@@ -1,5 +1,5 @@
 import json
-from pathlib import Path
+import pkgutil
 from typing import TYPE_CHECKING
 
 from .Types import LocData
@@ -9,15 +9,8 @@ if TYPE_CHECKING:
 
 
 def load_locations_json(filename: str = "ap_locations.json"):
-    curr_path = Path(__file__).resolve()
-    curr_dir = curr_path.parent
-    data_file_path = curr_dir / "data" / "ap_locations.json"
-
-    with open(data_file_path, "r") as f:
-        data = json.load(f)
-        f.close()
-
-    return data
+    fname = "/".join(["data", filename])
+    return json.loads(pkgutil.get_data(__name__, fname).decode())
 
 
 def generate_locations() -> list[(str, LocData)]:
