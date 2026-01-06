@@ -44,7 +44,7 @@ class ArchipelaCodeWorld(World):
     item_name_to_id = {name: data.code for name, data in item_table.items()}
     location_name_to_id = get_location_names()
 
-    archipelacode_apworld_version: VersionIdentifier = VersionIdentifier(0, 0, 1)
+    archipelacode_apworld_version: VersionIdentifier = VersionIdentifier(0, 0, 2)
 
     included_locations: list[LocData] = []
     included_languages: list[Language] = []
@@ -353,7 +353,7 @@ class ArchipelaCodeWorld(World):
             float(self.options.TotalProblemCount.value) * float(self.options.EndGoal.value) / 100.0
         )
 
-        slot_data["metadata"]["apworld_version"] = (
+        slot_data["metadata"]["minimum_extension_version"] = (
             f"{self.archipelacode_apworld_version.major}.{self.archipelacode_apworld_version.minor}.{self.archipelacode_apworld_version.patch}"
         )
 
