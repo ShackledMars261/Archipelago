@@ -21,7 +21,7 @@ def adjust_options(world: "ArchipelaCodeWorld"):
 
 
 class EndGoal(Range):
-    """What percentage of problems need to be completed in order to \"win\" the game?"""
+    """The percentage of problems needed to be completed in order to \"win\" the game."""
 
     display_name = "End Goal"
     range_start = 1
