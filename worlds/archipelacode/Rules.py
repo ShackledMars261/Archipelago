@@ -1,9 +1,10 @@
+import math
 from typing import TYPE_CHECKING
 
 from worlds.AutoWorld import CollectionState
 from worlds.generic.Rules import add_rule
 
-from .Items import get_item_name_from_id
+from .Items import get_item_name_from_id, item_frequencies
 
 if TYPE_CHECKING:
     from . import ArchipelaCodeWorld
@@ -87,8 +88,29 @@ def set_rules(world: "ArchipelaCodeWorld") -> None:
     # )
     set_custom_rules(world)
 
-    world.multiworld.completion_condition[world.player] = lambda state: has_reached_goal(world, state)
+    # world.multiworld.completion_condition[world.player] = lambda state: has_reached_goal(world, state)
 
     # Uncomment the next 2 lines in order to generate a PlantUML file that graphs the regions
     # from Utils import visualize_regions
     # visualize_regions(world.multiworld.get_region("Starter Problems", world.player), "archipelacode.puml")
+
+
+def calculate_possible_problem_count(state: CollectionState, world: "ArchipelaCodeWorld", player: int) -> int:
+    unlock_count: int = state.count("Progressive Problem Unlock", player)
+    unlock_percentage: float = float(1 + unlock_count) / float(1 + item_frequencies["Progressive Problem Unlock"])
+    unlocked_problem_count: int = round(unlock_percentage * float(world.options.TotalProblemCount))
+    return unlocked_problem_count
+
+
+def set_completion_rules(world: "ArchipelaCodeWorld", player: int) -> None:
+    world.multiworld.completion_condition[player] = lambda state: (
+        calculate_possible_problem_count(state, world, player)
+        >= math.floor(float(world.options.EndGoal) * float(world.options.TotalProblemCount) / 100.0)
+    )
+
+
+"""
+required_problem_count: int = math.floor(
+    float(world.options.EndGoal) * float(world.options.TotalProblemCount) / 100.0
+)
+"""

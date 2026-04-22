@@ -33,7 +33,7 @@ class TotalProblemCount(Range):
     """How many total problems to include."""
 
     display_name = "Total Problems"
-    range_start = 10
+    range_start = 30
     range_end = 200
     default = 50
 
@@ -54,8 +54,8 @@ class LanguageChoice(Choice):
     display_name = "Language Choice"
     option_python = 0
     option_javascript = 1
-    option_typescript = 2
-    option_golang = 3
+    # option_typescript = 2
+    # option_golang = 3
     default = 0
 
 

@@ -1,6 +1,6 @@
 {
     "game": "ArchipelaCode",
     "minimum_ap_version": "0.6.4",
-    "world_version": "0.0.1",
+    "world_version": "0.0.3",
     "authors": ["ShackledMars261"]
 }
