@@ -8,27 +8,25 @@ if TYPE_CHECKING:
     from . import MIOWorld
 
 ITEM_NAME_TO_ID: dict[str, int] = {
-    "Navigation Circuit": 1,
-    "Flowing Steps": 2,
-    "Hairpin": 3,
-    "Dodge": 4,
-    "Harvester": 5,
-    "Sail": 6,
-    "Striders": 7,
-    "Slingshot": 8,
-    "1 Nacre": 9,
+    "Hairpin": 0,
+    "Harvester": 1,
+    "Dodge": 2,
+    "Sail": 3,
+    "Striders": 4,
+    "Slingshot": 5,
+    "Flowing Steps": 6,
+    "Random Amount of Liquid Nacre": 7,
 }
 
 DEFAULT_ITEM_CLASSIFICATIONS: dict[str, ItemClassification] = {
-    "Navigation Circuit": ItemClassification.useful,
-    "Flowing Steps": ItemClassification.progression,
     "Hairpin": ItemClassification.progression,
-    "Dodge": ItemClassification.progression,
     "Harvester": ItemClassification.progression,
+    "Dodge": ItemClassification.progression,
     "Sail": ItemClassification.progression,
     "Striders": ItemClassification.progression,
     "Slingshot": ItemClassification.progression,
-    "1 Nacre": ItemClassification.filler,
+    "Flowing Steps": ItemClassification.progression,
+    "Random Amount of Liquid Nacre": ItemClassification.filler,
 }
 
 
@@ -37,7 +35,7 @@ class MIOItem(Item):
 
 
 def get_random_filler_item_name(world: MIOWorld) -> str:
-    return "1 Nacre"  # filler item name, change this
+    return "Random Amount of Liquid Nacre"  # filler item name, change this
 
 
 def create_item_with_correct_classification(world: MIOWorld, name: str) -> MIOItem:
@@ -48,14 +46,13 @@ def create_item_with_correct_classification(world: MIOWorld, name: str) -> MIOIt
 
 def create_all_items(world: MIOWorld) -> None:
     itempool: list[Item] = [
-        world.create_item("Navigation Circuit"),
-        world.create_item("Flowing Steps"),
         world.create_item("Hairpin"),
-        world.create_item("Dodge"),
         world.create_item("Harvester"),
+        world.create_item("Dodge"),
         world.create_item("Sail"),
         world.create_item("Striders"),
         world.create_item("Slingshot"),
+        world.create_item("Flowing Steps"),
     ]
 
     # append any conditional items here
