@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from worlds.generic.Rules import set_rule
+from rule_builder.rules import Has
 
 if TYPE_CHECKING:
     from . import MIOWorld
@@ -17,12 +17,18 @@ def set_all_rules(world: MIOWorld) -> None:
 def set_all_entrance_rules(world: MIOWorld) -> None:
     f1_to_s1 = world.get_entrance("ST_security_fall_F1 to ST_security_fall_S1")
 
-    set_rule(f1_to_s1, lambda state: state.has("Sail"))
+    has_sail = Has("Sail")
+
+    world.set_rule(f1_to_s1, has_sail)
 
 
 def set_all_location_rules(world: MIOWorld) -> None:
-    pass
+    can_defeat_ati = Has("Hairpin")
+
+    ati_defeated = world.get_location("Ati Defeated")
+
+    world.set_rule(ati_defeated, can_defeat_ati)
 
 
 def set_completion_condition(world: MIOWorld) -> None:
-    world.multiworld.completion_condition[world.player] = lambda state: state.has("Victory", world.player)
+    world.set_completion_rule(Has("Victory"))

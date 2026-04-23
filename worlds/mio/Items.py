@@ -31,7 +31,7 @@ DEFAULT_ITEM_CLASSIFICATIONS: dict[str, ItemClassification] = {
 
 
 class MIOItem(Item):
-    game = "MIO: Memories in Orbit"
+    game = "Memories in Orbit"
 
 
 def get_random_filler_item_name(world: MIOWorld) -> str:

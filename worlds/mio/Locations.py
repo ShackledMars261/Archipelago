@@ -22,7 +22,7 @@ LOCATION_NAME_TO_ID: dict[str, int] = {
 
 
 class MIOLocation(Location):
-    game = "MIO: Memories in Orbit"
+    game = "Memories in Orbit"
 
 
 def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | None]:
