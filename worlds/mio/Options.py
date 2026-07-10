@@ -5,18 +5,18 @@ from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle
 
 class BossKillChecks(Toggle):
     """
-    Bosses send a check when killed.
+    Bosses send a check when killed. CURRENTLY UNIMPLEMENTED!!!
     """
 
-    display_name = "Enable Boss Kill Checks"
+    display_name = "Enable Boss Kill Checks (CURRENTLY UNIMPLEMENTED)"
 
 
 class LogicDifficulty(Choice):
     """
-    The difficulty you want to set the logic to.
+    The difficulty you want to set the logic to. CURRENTLY UNIMPLEMENTED!!!
     """
 
-    display_name = "Logic Difficulty"
+    display_name = "Logic Difficulty (CURRENTLY UNIMPLEMENTED)"
 
     option_intended = 0
     option_skips = 1
