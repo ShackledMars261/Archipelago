@@ -3,7 +3,6 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from BaseClasses import Region
-from Utils import visualize_regions
 from worlds.mio.DataProvider import WorldDataRoom, WorldDataTransition
 
 if TYPE_CHECKING:
@@ -13,7 +12,7 @@ if TYPE_CHECKING:
 def create_and_connect_regions(world: MIOWorld) -> None:
     create_all_regions(world)
     connect_regions(world)
-    visualize_regions(world.get_region("ST_security_fall_P1"), "mio.puml")
+    # visualize_regions(world.get_region("ST_security_fall_P1"), "mio.puml")
 
 
 def create_all_regions(world: MIOWorld) -> None:
