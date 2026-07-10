@@ -25,16 +25,26 @@ class LogicDifficulty(Choice):
     default = option_intended
 
 
+class RandomizeStartingItems(Toggle):
+    """
+    When disabled, Slash and Self-Awareness are always found at their vanilla
+    starting locations instead of being randomized like other items.
+    """
+
+    display_name = "Randomize Starting Items"
+
+
 @dataclass
 class MIOOptions(PerGameCommonOptions):
     logic_difficulty: LogicDifficulty
     boss_kill_checks: BossKillChecks
+    randomize_starting_items: RandomizeStartingItems
 
 
 option_groups = [
     OptionGroup(
         "Gameplay Options",
-        [LogicDifficulty, BossKillChecks],
+        [LogicDifficulty, BossKillChecks, RandomizeStartingItems],
     ),
 ]
 

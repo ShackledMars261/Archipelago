@@ -100,23 +100,25 @@ def create_item_with_correct_classification(world: MIOWorld, name: str) -> MIOIt
     return MIOItem(name, classification, item_name_to_id(world, name), world.player)
 
 
+# Maps a starting item's name to its vanilla starting location, used to lock
+# it there instead of randomizing it when "Randomize Starting Items" is off.
+STARTING_ITEM_LOCATIONS: dict[str, str] = {
+    "Slash": "ST_security_fall_P1: Starting Item (Slash)",
+    "Modifier - Self-Awareness": "ST_security_fall_P1: Starting Item (Self-Awareness)",
+}
+
+
 def create_all_items(world: MIOWorld) -> None:
-    itempool: list[Item] = [
-        # world.create_item("Hairpin"),
-        # world.create_item("Harvester"),
-        # world.create_item("Dodge"),
-        # world.create_item("Sail"),
-        # world.create_item("Striders"),
-        # world.create_item("Slingshot"),
-        # world.create_item("Flowing Steps"),
-        # world.create_item("Flash Memory - Connection Lost"),
-        # world.create_item("Silo Access Badge"),
-    ]
-
     items: list[WorldDataItem] = world.data_provider.data.items
-    itempool.extend([world.create_item(item.name) for item in items])
 
-    # append any conditional items here
+    if world.options.randomize_starting_items:
+        itempool: list[Item] = [world.create_item(item.name) for item in items]
+    else:
+        itempool: list[Item] = [
+            world.create_item(item.name) for item in items if item.name not in STARTING_ITEM_LOCATIONS
+        ]
+        for item_name, location_name in STARTING_ITEM_LOCATIONS.items():
+            world.get_location(location_name).place_locked_item(world.create_item(item_name))
 
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
