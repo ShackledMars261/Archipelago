@@ -1,37 +1,88 @@
+import json
 import pkgutil
+import re
+from dataclasses import dataclass, field
 from typing import Any, TypeVar
-
-from pydantic import BaseModel, Field
-from pydantic_extra_types.semantic_version import SemanticVersion
 
 T = TypeVar("T")
 
-
-class ItemSummary(BaseModel):
-    itemId: int = Field(-1)
-    itemName: str = Field("")
-    itemClassification: int = Field(1)
-
-
-class EventSummary(BaseModel):
-    eventId: int = Field(-1)
-    eventLocationName: str = Field("")
-    eventItemName: str = Field("")
+# https://semver.org/#is-there-a-suggested-regular-expression-regex-to-check-a-semver-string
+_SEMVER_RE = re.compile(
+    r"^(?P<major>0|[1-9]\d*)\.(?P<minor>0|[1-9]\d*)\.(?P<patch>0|[1-9]\d*)"
+    r"(?:-(?P<prerelease>(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)"
+    r"(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?"
+    r"(?:\+(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"
+)
 
 
-class LocationSummary(BaseModel):
-    locationId: int = Field(-1)
-    locationName: str = Field("")
+def _validate_semver(version: str) -> str:
+    if not _SEMVER_RE.match(version):
+        raise ValueError(f"'{version}' is not a valid semantic version")
+    return version
 
 
-class TransitionSummary(BaseModel):
-    transitionId: int = Field(-1)
-    transitionName: str = Field("")
-    linkedRoomId: int = Field(-1)
-    linkedRoomName: str = Field("")
+@dataclass
+class ItemSummary:
+    itemId: int = -1
+    itemName: str = ""
+    itemClassification: int = 1
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "ItemSummary":
+        return cls(
+            itemId=d.get("itemId", -1),
+            itemName=d.get("itemName", ""),
+            itemClassification=d.get("itemClassification", 1),
+        )
 
 
-class RuleNode(BaseModel):
+@dataclass
+class EventSummary:
+    eventId: int = -1
+    eventLocationName: str = ""
+    eventItemName: str = ""
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "EventSummary":
+        return cls(
+            eventId=d.get("eventId", -1),
+            eventLocationName=d.get("eventLocationName", ""),
+            eventItemName=d.get("eventItemName", ""),
+        )
+
+
+@dataclass
+class LocationSummary:
+    locationId: int = -1
+    locationName: str = ""
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "LocationSummary":
+        return cls(
+            locationId=d.get("locationId", -1),
+            locationName=d.get("locationName", ""),
+        )
+
+
+@dataclass
+class TransitionSummary:
+    transitionId: int = -1
+    transitionName: str = ""
+    linkedRoomId: int = -1
+    linkedRoomName: str = ""
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "TransitionSummary":
+        return cls(
+            transitionId=d.get("transitionId", -1),
+            transitionName=d.get("transitionName", ""),
+            linkedRoomId=d.get("linkedRoomId", -1),
+            linkedRoomName=d.get("linkedRoomName", ""),
+        )
+
+
+@dataclass
+class RuleNode:
     """
     Mirrors Archipelago's rule_builder `to_dict()` / `from_dict()` schema
     (docs/rule builder.md, "Serialization"), so it can be handed directly to
@@ -39,124 +90,208 @@ class RuleNode(BaseModel):
     nodes carry `children` instead.
     """
 
-    rule: str = Field("")
-    options: list[Any] = Field([])
-    args: dict[str, Any] | None = Field(None)
-    children: list["RuleNode"] | None = Field(None)
+    rule: str = ""
+    options: list[Any] = field(default_factory=list)
+    args: dict[str, Any] | None = None
+    children: list["RuleNode"] | None = None
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any] | None) -> "RuleNode | None":
+        if d is None:
+            return None
+        children_data = d.get("children")
+        return cls(
+            rule=d.get("rule", ""),
+            options=d.get("options", []),
+            args=d.get("args"),
+            children=[cls.from_dict(c) for c in children_data] if children_data is not None else None,
+        )
 
 
-RuleNode.model_rebuild()
+@dataclass
+class PreWorldDataTransition:
+    id: int = -1
+    name: str = ""
+    fromId: int = -1
+    fromName: str = ""
+    toId: int = -1
+    toName: str = ""
+    requirements: RuleNode | None = None
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "PreWorldDataTransition":
+        return cls(
+            id=d.get("id", -1),
+            name=d.get("name", ""),
+            fromId=d.get("fromId", -1),
+            fromName=d.get("fromName", ""),
+            toId=d.get("toId", -1),
+            toName=d.get("toName", ""),
+            requirements=RuleNode.from_dict(d.get("requirements")),
+        )
 
 
-class PreWorldDataTransition(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    fromId: int = Field(-1)
-    fromName: str = Field("")
-    toId: int = Field(-1)
-    toName: str = Field("")
-    requirements: RuleNode | None = Field(None)
+@dataclass
+class PreWorldDataRoom:
+    id: int = -1
+    name: str = ""
+    transitions: list[TransitionSummary] = field(default_factory=list)
+    locations: list[LocationSummary] = field(default_factory=list)
+    events: list[EventSummary] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "PreWorldDataRoom":
+        return cls(
+            id=d.get("id", -1),
+            name=d.get("name", ""),
+            transitions=[TransitionSummary.from_dict(t) for t in d.get("transitions", [])],
+            locations=[LocationSummary.from_dict(l) for l in d.get("locations", [])],
+            events=[EventSummary.from_dict(e) for e in d.get("events", [])],
+        )
 
 
-class PreWorldDataRoom(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    transitions: list[TransitionSummary] = Field([])
-    locations: list[LocationSummary] = Field([])
-    events: list[EventSummary] = Field([])
+@dataclass
+class PreWorldDataLocation:
+    id: int = -1
+    name: str = ""
+    roomId: int = -1
+    roomName: str = ""
+    vanillaItem: ItemSummary = field(default_factory=ItemSummary)
+    requirements: RuleNode | None = None
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "PreWorldDataLocation":
+        return cls(
+            id=d.get("id", -1),
+            name=d.get("name", ""),
+            roomId=d.get("roomId", -1),
+            roomName=d.get("roomName", ""),
+            vanillaItem=ItemSummary.from_dict(d.get("vanillaItem", {})),
+            requirements=RuleNode.from_dict(d.get("requirements")),
+        )
 
 
-class PreWorldDataLocation(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    roomId: int = Field(-1)
-    roomName: str = Field("")
-    vanillaItem: ItemSummary = Field(default_factory=ItemSummary)
-    requirements: RuleNode | None = Field(None)
+@dataclass
+class PreWorldDataEvent:
+    id: int = -1
+    roomId: int = -1
+    roomName: str = ""
+    locationName: str = ""
+    itemName: str = ""
+    requirements: RuleNode | None = None
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "PreWorldDataEvent":
+        return cls(
+            id=d.get("id", -1),
+            roomId=d.get("roomId", -1),
+            roomName=d.get("roomName", ""),
+            locationName=d.get("locationName", ""),
+            itemName=d.get("itemName", ""),
+            requirements=RuleNode.from_dict(d.get("requirements")),
+        )
 
 
-class PreWorldDataEvent(BaseModel):
-    id: int = Field(-1)
-    roomId: int = Field(-1)
-    roomName: str = Field("")
-    locationName: str = Field("")
-    itemName: str = Field("")
-    requirements: RuleNode | None = Field(None)
+@dataclass
+class PreWorldDataItem:
+    id: int = -1
+    name: str = ""
+    classification: int = 1
+    saveEntry: str = ""
+    count: int = 0
+    vanillaLocations: list[LocationSummary] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "PreWorldDataItem":
+        return cls(
+            id=d.get("id", -1),
+            name=d.get("name", ""),
+            classification=d.get("classification", 1),
+            saveEntry=d.get("saveEntry", ""),
+            count=d.get("count", 0),
+            vanillaLocations=[LocationSummary.from_dict(l) for l in d.get("vanillaLocations", [])],
+        )
 
 
-class PreWorldDataItem(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    classification: int = Field(1)
-    saveEntry: str = Field("")
-    count: int = Field(0)
-    vanillaLocations: list[LocationSummary] = Field([])
+@dataclass
+class PreWorldData:
+    version: str = "0.0.1"
+    rooms: list[PreWorldDataRoom] = field(default_factory=list)
+    transitions: list[PreWorldDataTransition] = field(default_factory=list)
+    locations: list[PreWorldDataLocation] = field(default_factory=list)
+    events: list[PreWorldDataEvent] = field(default_factory=list)
+    items: list[PreWorldDataItem] = field(default_factory=list)
+
+    @classmethod
+    def from_dict(cls, d: dict[str, Any]) -> "PreWorldData":
+        return cls(
+            version=_validate_semver(d.get("version", "0.0.1")),
+            rooms=[PreWorldDataRoom.from_dict(r) for r in d.get("rooms", [])],
+            transitions=[PreWorldDataTransition.from_dict(t) for t in d.get("transitions", [])],
+            locations=[PreWorldDataLocation.from_dict(l) for l in d.get("locations", [])],
+            events=[PreWorldDataEvent.from_dict(e) for e in d.get("events", [])],
+            items=[PreWorldDataItem.from_dict(i) for i in d.get("items", [])],
+        )
 
 
-class PreWorldData(BaseModel):
-    version: SemanticVersion = Field("0.0.1")  # ty:ignore[invalid-assignment]
-    rooms: list[PreWorldDataRoom] = Field([])
-    transitions: list[PreWorldDataTransition] = Field([])
-    locations: list[PreWorldDataLocation] = Field([])
-    events: list[PreWorldDataEvent] = Field([])
-    items: list[PreWorldDataItem] = Field([])
+@dataclass
+class WorldDataItem:
+    id: int = -1
+    name: str = ""
+    classification: int = 1
+    saveEntry: str = ""
+    count: int = 0
+    vanillaLocations: list["WorldDataLocation"] = field(default_factory=list)
 
 
-class WorldDataItem(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    classification: int = Field(1)
-    saveEntry: str = Field("")
-    count: int = Field(0)
-    vanillaLocations: list["WorldDataLocation"] = Field([])
+@dataclass
+class WorldDataLocation:
+    id: int = -1
+    name: str = ""
+    roomId: int = -1
+    roomName: str = ""
+    requirements: RuleNode | None = None
+    vanillaItem: WorldDataItem = field(default_factory=WorldDataItem)
 
 
-class WorldDataLocation(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    roomId: int = Field(-1)
-    roomName: str = Field("")
-    requirements: RuleNode | None = Field(None)
-    vanillaItem: WorldDataItem = Field(default_factory=WorldDataItem)
+@dataclass
+class WorldDataEvent:
+    id: int = -1
+    roomId: int = -1
+    roomName: str = ""
+    locationName: str = ""
+    itemName: str = ""
+    requirements: RuleNode | None = None
 
 
-class WorldDataEvent(BaseModel):
-    id: int = Field(-1)
-    roomId: int = Field(-1)
-    roomName: str = Field("")
-    locationName: str = Field("")
-    itemName: str = Field("")
-    requirements: RuleNode | None = Field(None)
+@dataclass
+class WorldDataTransition:
+    id: int = -1
+    name: str = ""
+    fromId: int = -1
+    fromName: str = ""
+    toId: int = -1
+    toName: str = ""
+    requirements: RuleNode | None = None
 
 
-class WorldDataTransition(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    fromId: int = Field(-1)
-    fromName: str = Field("")
-    toId: int = Field(-1)
-    toName: str = Field("")
-    requirements: RuleNode | None = Field(None)
+@dataclass
+class WorldDataRoom:
+    id: int = -1
+    name: str = ""
+    transitions: list[WorldDataTransition] = field(default_factory=list)
+    locations: list[WorldDataLocation] = field(default_factory=list)
+    events: list[WorldDataEvent] = field(default_factory=list)
 
 
-class WorldDataRoom(BaseModel):
-    id: int = Field(-1)
-    name: str = Field("")
-    transitions: list[WorldDataTransition] = Field([])
-    locations: list[WorldDataLocation] = Field([])
-    events: list[WorldDataEvent] = Field([])
-
-
-WorldDataItem.model_rebuild()
-
-
-class WorldData(BaseModel):
-    version: SemanticVersion = Field("0.0.1")  # ty:ignore[invalid-assignment]
-    rooms: list[WorldDataRoom] = Field([])
-    transitions: list[WorldDataTransition] = Field([])
-    locations: list[WorldDataLocation] = Field([])
-    events: list[WorldDataEvent] = Field([])
-    items: list[WorldDataItem] = Field([])
+@dataclass
+class WorldData:
+    version: str = "0.0.1"
+    rooms: list[WorldDataRoom] = field(default_factory=list)
+    transitions: list[WorldDataTransition] = field(default_factory=list)
+    locations: list[WorldDataLocation] = field(default_factory=list)
+    events: list[WorldDataEvent] = field(default_factory=list)
+    items: list[WorldDataItem] = field(default_factory=list)
 
 
 class DataProvider:
@@ -169,7 +304,7 @@ class DataProvider:
     def load_json(self, filename: str = "world.json") -> PreWorldData:
         fname: str = "/".join(["data", filename])
         data: bytes = pkgutil.get_data(__name__, fname) or b"{}"
-        return PreWorldData.model_validate_json(data.decode())
+        return PreWorldData.from_dict(json.loads(data.decode()))
 
     def process_data(self) -> None:
         # ── Pass 1: create all objects (no links yet) ──────────────────────────

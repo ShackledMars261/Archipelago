@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import dataclasses
 from typing import TYPE_CHECKING
 
 from BaseClasses import Entrance, Location
@@ -17,7 +18,7 @@ def set_all_rules(world: MIOWorld) -> None:
 
 
 def rule_from_node(world: MIOWorld, node: RuleNode) -> Rule:
-    return world.rule_from_dict(node.model_dump())
+    return world.rule_from_dict(dataclasses.asdict(node))
 
 
 def set_all_entrance_rules(world: MIOWorld) -> None:
