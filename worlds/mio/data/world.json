@@ -1,6 +1,6 @@
 {
-    "version": "0.0.83",
-    "timestamp": "1787792562.153874",
+    "version": "0.0.89",
+    "timestamp": "1787801860.511449",
     "rooms": [
         {
             "id": 1,
@@ -16681,7 +16681,12 @@
             "fromName": "GA_roof_leaves_C2",
             "toId": 92,
             "toName": "GA_roof_transi_C2",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 177,
@@ -16929,7 +16934,12 @@
             "fromName": "GA_roof_suns_P2",
             "toId": 87,
             "toName": "GA_roof_suns_P1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 192,
@@ -17180,12 +17190,9 @@
             "toId": 131,
             "toName": "GA_vin_terrace_C2",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Striders",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -18516,29 +18523,10 @@
             "toId": 119,
             "toName": "GA_vin_arom_F2",
             "requirements": {
-                "rule": "Or",
+                "rule": "False_",
                 "options": [],
-                "args": null,
-                "children": [
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Hairpin",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Striders",
-                            "count": 1
-                        },
-                        "children": null
-                    }
-                ]
+                "args": {},
+                "children": null
             }
         },
         {
@@ -19175,7 +19163,12 @@
             "fromName": "GA_vin_terrace_P2",
             "toId": 113,
             "toName": "GA_vin_arom_C1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 316,
@@ -20519,29 +20512,10 @@
             "toId": 7,
             "toName": "ST_security_transi_P1",
             "requirements": {
-                "rule": "Or",
+                "rule": "False_",
                 "options": [],
-                "args": null,
-                "children": [
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Striders",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Hairpin",
-                            "count": 1
-                        },
-                        "children": null
-                    }
-                ]
+                "args": {},
+                "children": null
             }
         },
         {
@@ -20652,28 +20626,10 @@
             "toId": 193,
             "toName": "LQ_city_mast_F0",
             "requirements": {
-                "rule": "And",
+                "rule": "False_",
                 "options": [],
-                "args": null,
-                "children": [
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Striders",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "CanReachRegion",
-                        "options": [],
-                        "args": {
-                            "region_name": "LQ_city_mast_F0"
-                        },
-                        "children": null
-                    }
-                ]
+                "args": {},
+                "children": null
             }
         },
         {
@@ -20709,7 +20665,12 @@
             "fromName": "LQ_city_center_C1",
             "toId": 169,
             "toName": "LQ_city_center_C3",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 411,
@@ -20984,7 +20945,12 @@
             "fromName": "LQ_city_center_C3",
             "toId": 183,
             "toName": "LQ_city_hall_C4",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 418,
@@ -21463,7 +21429,12 @@
             "fromName": "LQ_city_hall_C2",
             "toId": 180,
             "toName": "LQ_city_hall_C1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 453,
@@ -21651,7 +21622,12 @@
             "fromName": "LQ_city_market_P1",
             "toId": 259,
             "toName": "LQ_under_asc_P2",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 465,
@@ -21660,7 +21636,12 @@
             "fromName": "LQ_city_market_P1",
             "toId": 280,
             "toName": "LQ_under_hub_P3",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 466,
@@ -21687,12 +21668,9 @@
             "toId": 189,
             "toName": "LQ_city_mast_C4",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slingshot",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -21900,12 +21878,9 @@
             "toId": 195,
             "toName": "LQ_city_mast_P3",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slingshot",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -22418,7 +22393,12 @@
             "fromName": "LQ_city_transi_F2",
             "toId": 179,
             "toName": "LQ_city_graveyard_P1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 501,
@@ -22594,7 +22574,12 @@
             "fromName": "LQ_city_transi_P5",
             "toId": 298,
             "toName": "LQ_under_tuto_P2",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 517,
@@ -22821,12 +22806,9 @@
             "toId": 214,
             "toName": "LQ_pearl_intro_C1",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Striders",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -22927,12 +22909,9 @@
             "toId": 247,
             "toName": "LQ_ruins_transi_F1",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slash",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -23021,7 +23000,12 @@
             "fromName": "LQ_ruins_conex_S2",
             "toId": 13,
             "toName": "HUB_hub_transi_C1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 551,
@@ -23085,12 +23069,9 @@
             "toId": 257,
             "toName": "LQ_ruins_transi_S3",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slash",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -23396,7 +23377,12 @@
             "fromName": "LQ_ruins_intro_P1",
             "toId": 249,
             "toName": "LQ_ruins_transi_F3",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 579,
@@ -24118,7 +24104,12 @@
             "fromName": "LQ_ruins_transi_P1",
             "toId": 255,
             "toName": "LQ_ruins_transi_P5",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 620,
@@ -24209,7 +24200,12 @@
             "fromName": "LQ_ruins_transi_P3",
             "toId": 254,
             "toName": "LQ_ruins_transi_P4",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 626,
@@ -24263,12 +24259,9 @@
             "toId": 230,
             "toName": "LQ_ruins_hook_P5",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slash",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -25084,12 +25077,9 @@
             "toId": 358,
             "toName": "ST_security_glide_P3",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slash",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -25268,7 +25258,12 @@
             "fromName": "LQ_under_hub_F3",
             "toId": 289,
             "toName": "LQ_under_transi_C1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 691,
@@ -25813,12 +25808,9 @@
             "toId": 259,
             "toName": "LQ_under_asc_P2",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slash",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -27093,7 +27085,12 @@
             "fromName": "ST_cuves_main_P1",
             "toId": 309,
             "toName": "ST_cuves_goo_P9",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 780,
@@ -27102,7 +27099,12 @@
             "fromName": "ST_cuves_main_P1",
             "toId": 318,
             "toName": "ST_cuves_hook_P9",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 781,
@@ -27631,7 +27633,12 @@
             "fromName": "ST_pearl_halyn_F1",
             "toId": 328,
             "toName": "ST_pearl_halyn_C1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 809,
@@ -27907,7 +27914,12 @@
             "fromName": "ST_pearl_halyn_P5",
             "toId": 447,
             "toName": "ST_tube_vanilla_S1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 825,
@@ -27931,45 +27943,10 @@
             "toId": 325,
             "toName": "ST_pearl_asc_C1",
             "requirements": {
-                "rule": "And",
+                "rule": "False_",
                 "options": [],
-                "args": null,
-                "children": [
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Striders",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "Or",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Flowing Steps",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    }
-                ]
+                "args": {},
+                "children": null
             }
         },
         {
@@ -28684,45 +28661,10 @@
             "toId": 327,
             "toName": "ST_pearl_end_C1",
             "requirements": {
-                "rule": "And",
+                "rule": "False_",
                 "options": [],
-                "args": null,
-                "children": [
-                    {
-                        "rule": "Or",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Striders",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Slash",
-                            "count": 1
-                        },
-                        "children": null
-                    }
-                ]
+                "args": {},
+                "children": null
             }
         },
         {
@@ -31954,7 +31896,12 @@
             "fromName": "ST_tube_factory_P1",
             "toId": 401,
             "toName": "ST_tube_factory_F1",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 1017,
@@ -31963,7 +31910,12 @@
             "fromName": "ST_tube_factory_P1",
             "toId": 404,
             "toName": "ST_tube_factory_P2",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 1018,
@@ -32245,7 +32197,12 @@
             "fromName": "ST_tube_factory_P3",
             "toId": 411,
             "toName": "ST_tube_factory_P9",
-            "requirements": null
+            "requirements": {
+                "rule": "False_",
+                "options": [],
+                "args": {},
+                "children": null
+            }
         },
         {
             "id": 1029,
@@ -33338,12 +33295,9 @@
             "toId": 438,
             "toName": "ST_tube_transi_P1",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slash",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -33364,12 +33318,9 @@
             "toId": 440,
             "toName": "ST_tube_transi_P3",
             "requirements": {
-                "rule": "Has",
+                "rule": "False_",
                 "options": [],
-                "args": {
-                    "item_name": "Slash",
-                    "count": 1
-                },
+                "args": {},
                 "children": null
             }
         },
@@ -36908,13 +36859,35 @@
                 "itemClassification": 2
             },
             "requirements": {
-                "rule": "Has",
+                "rule": "And",
                 "options": [],
-                "args": {
-                    "item_name": "Find Mel",
-                    "count": 1
-                },
-                "children": null
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Find Mel",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Mel Freed",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    }
+                ]
             }
         },
         {
@@ -36928,13 +36901,35 @@
                 "itemClassification": 2
             },
             "requirements": {
-                "rule": "Has",
+                "rule": "And",
                 "options": [],
-                "args": {
-                    "item_name": "Find Mel",
-                    "count": 1
-                },
-                "children": null
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Find Mel",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Mel Freed",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    }
+                ]
             }
         },
         {
@@ -36956,7 +36951,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -36966,9 +36961,65 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
+                            ],
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
                             ],
                             "count": 1
                         },
@@ -36996,7 +37047,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37006,9 +37057,65 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
+                            ],
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
                             ],
                             "count": 1
                         },
@@ -37036,7 +37143,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37046,11 +37153,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 2
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 3
                         },
                         "children": null
                     }
@@ -37076,7 +37239,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37086,12 +37249,19 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 2
                         },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
                         "children": null
                     }
                 ]
@@ -37116,7 +37286,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37126,12 +37296,19 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 2
                         },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
                         "children": null
                     }
                 ]
@@ -37156,7 +37333,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37166,11 +37343,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 2
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 3
                         },
                         "children": null
                     }
@@ -37196,18 +37429,15 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "Has",
+                        "rule": "True_",
                         "options": [],
-                        "args": {
-                            "item_name": "Mel Freed",
-                            "count": 1
-                        },
+                        "args": {},
                         "children": null
                     }
                 ]
@@ -37224,13 +37454,84 @@
                 "itemClassification": 2
             },
             "requirements": {
-                "rule": "Has",
+                "rule": "And",
                 "options": [],
-                "args": {
-                    "item_name": "Find Mel",
-                    "count": 1
-                },
-                "children": null
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Find Mel",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Mel Freed",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 1
+                        },
+                        "children": null
+                    }
+                ]
             }
         },
         {
@@ -37244,13 +37545,84 @@
                 "itemClassification": 2
             },
             "requirements": {
-                "rule": "Has",
+                "rule": "And",
                 "options": [],
-                "args": {
-                    "item_name": "Find Mel",
-                    "count": 1
-                },
-                "children": null
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Find Mel",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Mel Freed",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 1
+                        },
+                        "children": null
+                    }
+                ]
             }
         },
         {
@@ -37272,7 +37644,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37282,11 +37654,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 2
                         },
                         "children": null
                     }
@@ -37312,7 +37740,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37322,11 +37750,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 2
                         },
                         "children": null
                     }
@@ -37352,7 +37836,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37362,11 +37846,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 3
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 2
                         },
                         "children": null
                     }
@@ -37392,7 +37932,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37402,11 +37942,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 3
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 2
                         },
                         "children": null
                     }
@@ -37424,13 +38020,84 @@
                 "itemClassification": 2
             },
             "requirements": {
-                "rule": "Has",
+                "rule": "And",
                 "options": [],
-                "args": {
-                    "item_name": "Find Mel",
-                    "count": 1
-                },
-                "children": null
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Find Mel",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Mel Freed",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 1
+                        },
+                        "children": null
+                    }
+                ]
             }
         },
         {
@@ -37444,13 +38111,84 @@
                 "itemClassification": 2
             },
             "requirements": {
-                "rule": "Has",
+                "rule": "And",
                 "options": [],
-                "args": {
-                    "item_name": "Find Mel",
-                    "count": 1
-                },
-                "children": null
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Find Mel",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Mel Freed",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 1
+                        },
+                        "children": null
+                    }
+                ]
             }
         },
         {
@@ -37472,7 +38210,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37482,11 +38220,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 2
                         },
                         "children": null
                     }
@@ -37512,7 +38306,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37522,11 +38316,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 3
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 4
                         },
                         "children": null
                     }
@@ -37552,7 +38402,7 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Find Mel",
+                            "item_name": "Mel Freed",
                             "count": 1
                         },
                         "children": null
@@ -37562,11 +38412,67 @@
                         "options": [],
                         "args": {
                             "item_names": [
-                                "Find Tan",
+                                "Find Rad",
+                                "Find Sin",
                                 "Find Cos",
-                                "Find Sin"
+                                "Find Tan"
                             ],
                             "count": 3
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "True_",
+                        "options": [],
+                        "args": {},
+                        "children": null
+                    },
+                    {
+                        "rule": "HasFromListUnique",
+                        "options": [],
+                        "args": {
+                            "item_names": [
+                                "Old Core (#1)",
+                                "Old Core (#2)",
+                                "Old Core (#3)",
+                                "Old Core (#4)",
+                                "Old Core (#5)",
+                                "Old Core (#6)",
+                                "Old Core (#7)",
+                                "Old Core (#8)",
+                                "Old Core (#9)",
+                                "Old Core (#10)",
+                                "Old Core (#11)",
+                                "Old Core (#12)",
+                                "Old Core (#13)",
+                                "Old Core (#14)",
+                                "Old Core (#15)",
+                                "Old Core (#16)",
+                                "Old Core (#17)",
+                                "Old Core (#18)",
+                                "Old Core (#19)",
+                                "Old Core (#20)",
+                                "Old Core (#21)",
+                                "Old Core (#22)",
+                                "Old Core (#23)",
+                                "Old Core (#24)",
+                                "Old Core (#25)",
+                                "Old Core (#26)",
+                                "Old Core (#27)",
+                                "Old Core (#28)",
+                                "Old Core (#29)",
+                                "Old Core (#30)",
+                                "Old Core (#31)",
+                                "Old Core (#32)",
+                                "Old Core (#33)",
+                                "Old Core (#34)",
+                                "Old Core (#35)",
+                                "Old Core (#36)",
+                                "Old Core (#37)",
+                                "Old Core (#38)",
+                                "Old Core (#39)"
+                            ],
+                            "count": 4
                         },
                         "children": null
                     }
@@ -43321,101 +44227,19 @@
                 "args": null,
                 "children": [
                     {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Slash",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
                         "rule": "And",
                         "options": [],
                         "args": null,
                         "children": [
-                            {
-                                "rule": "Or",
-                                "options": [],
-                                "args": null,
-                                "children": [
-                                    {
-                                        "rule": "Has",
-                                        "options": [],
-                                        "args": {
-                                            "item_name": "Slash",
-                                            "count": 1
-                                        },
-                                        "children": null
-                                    },
-                                    {
-                                        "rule": "And",
-                                        "options": [],
-                                        "args": null,
-                                        "children": [
-                                            {
-                                                "rule": "Has",
-                                                "options": [],
-                                                "args": {
-                                                    "item_name": "Hairpin",
-                                                    "count": 1
-                                                },
-                                                "children": null
-                                            },
-                                            {
-                                                "rule": "Has",
-                                                "options": [],
-                                                "args": {
-                                                    "item_name": "Modifier - Glitch Trail",
-                                                    "count": 1
-                                                },
-                                                "children": null
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "rule": "And",
-                                        "options": [],
-                                        "args": null,
-                                        "children": [
-                                            {
-                                                "rule": "Has",
-                                                "options": [],
-                                                "args": {
-                                                    "item_name": "Hairpin",
-                                                    "count": 1
-                                                },
-                                                "children": null
-                                            },
-                                            {
-                                                "rule": "Has",
-                                                "options": [],
-                                                "args": {
-                                                    "item_name": "Modifier - Afterimage",
-                                                    "count": 1
-                                                },
-                                                "children": null
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "rule": "And",
-                                        "options": [],
-                                        "args": null,
-                                        "children": [
-                                            {
-                                                "rule": "Has",
-                                                "options": [],
-                                                "args": {
-                                                    "item_name": "Sail",
-                                                    "count": 1
-                                                },
-                                                "children": null
-                                            },
-                                            {
-                                                "rule": "Has",
-                                                "options": [],
-                                                "args": {
-                                                    "item_name": "Modifier - Firefly",
-                                                    "count": 1
-                                                },
-                                                "children": null
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
                             {
                                 "rule": "Has",
                                 "options": [],
@@ -43424,6 +44248,171 @@
                                     "count": 1
                                 },
                                 "children": null
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Modifier - Glitch Trail",
+                                    "count": 1
+                                },
+                                "children": null
+                            }
+                        ]
+                    },
+                    {
+                        "rule": "And",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Hairpin",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Modifier - Afterimage",
+                                    "count": 1
+                                },
+                                "children": null
+                            }
+                        ]
+                    },
+                    {
+                        "rule": "And",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Sail",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Modifier - Firefly",
+                                    "count": 1
+                                },
+                                "children": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "roomId": 215,
+            "roomName": "LQ_pearl_intro_C2",
+            "locationName": "LQ_pearl_intro_C2: Defeat Ancile & Targa",
+            "itemName": "Ancile & Targa Defeated",
+            "saveEntry": "BOSS:TWIN_CRABASH",
+            "requirements": {
+                "rule": "And",
+                "options": [],
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -43440,105 +44429,6 @@
             }
         },
         {
-            "id": 4,
-            "roomId": 215,
-            "roomName": "LQ_pearl_intro_C2",
-            "locationName": "LQ_pearl_intro_C2: Defeat Ancile & Targa",
-            "itemName": "Ancile & Targa Defeated",
-            "saveEntry": "BOSS:TWIN_CRABASH",
-            "requirements": {
-                "rule": "Or",
-                "options": [],
-                "args": null,
-                "children": [
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Slash",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        {
             "id": 5,
             "roomId": 332,
             "roomName": "ST_pearl_halyn_P3",
@@ -43546,21 +44436,112 @@
             "itemName": "AnRa & Dr. Halyn Defeated",
             "saveEntry": "BOSS:PROJEKT",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
+                            "item_name": "Dodge",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Or",
                         "options": [],
                         "args": null,
                         "children": [
@@ -43577,57 +44558,7 @@
                                 "rule": "Has",
                                 "options": [],
                                 "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
+                                    "item_name": "Striders",
                                     "count": 1
                                 },
                                 "children": null
@@ -43864,21 +44795,103 @@
             "itemName": "Atmos Defeated",
             "saveEntry": "BOSS:TRAPU",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
-                        "rule": "Has",
+                        "rule": "Or",
                         "options": [],
-                        "args": {
-                            "item_name": "Slash",
-                            "count": 1
-                        },
-                        "children": null
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
-                        "rule": "And",
+                        "rule": "Or",
                         "options": [],
                         "args": null,
                         "children": [
@@ -43895,57 +44908,7 @@
                                 "rule": "Has",
                                 "options": [],
                                 "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
+                                    "item_name": "Dodge",
                                     "count": 1
                                 },
                                 "children": null
@@ -44062,21 +45025,103 @@
             "itemName": "Crow Defeated",
             "saveEntry": "BOSS:SCARECROW",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
-                        "rule": "Has",
+                        "rule": "Or",
                         "options": [],
-                        "args": {
-                            "item_name": "Slash",
-                            "count": 1
-                        },
-                        "children": null
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
-                        "rule": "And",
+                        "rule": "Or",
                         "options": [],
                         "args": null,
                         "children": [
@@ -44093,57 +45138,7 @@
                                 "rule": "Has",
                                 "options": [],
                                 "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
+                                    "item_name": "Dodge",
                                     "count": 1
                                 },
                                 "children": null
@@ -44161,93 +45156,118 @@
             "itemName": "Debby Defeated",
             "saveEntry": "BOSS:RAMBO",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
+                            "item_name": "Dodge",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Sail",
+                            "count": 1
+                        },
+                        "children": null
                     }
                 ]
             }
@@ -44458,93 +45478,118 @@
             "itemName": "Friends :) Defeated",
             "saveEntry": "BOSS:SPIDY",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
+                            "item_name": "Striders",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Harvester",
+                            "count": 1
+                        },
+                        "children": null
                     }
                 ]
             }
@@ -44656,93 +45701,127 @@
             "itemName": "Nabuu Defeated",
             "saveEntry": "BOSS:BAMBY",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
+                            "item_name": "Sail",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Harvester",
+                            "count": 1
+                        },
+                        "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Dodge",
+                            "count": 1
+                        },
+                        "children": null
                     }
                 ]
             }
@@ -44755,21 +45834,103 @@
             "itemName": "Poltergates Defeated",
             "saveEntry": "BOSS:DOOR",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
-                        "rule": "Has",
+                        "rule": "Or",
                         "options": [],
-                        "args": {
-                            "item_name": "Slash",
-                            "count": 1
-                        },
-                        "children": null
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
-                        "rule": "And",
+                        "rule": "Or",
                         "options": [],
                         "args": null,
                         "children": [
@@ -44786,57 +45947,7 @@
                                 "rule": "Has",
                                 "options": [],
                                 "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
+                                    "item_name": "Dodge",
                                     "count": 1
                                 },
                                 "children": null
@@ -44863,93 +45974,145 @@
             "itemName": "Shii Defeated",
             "saveEntry": "",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
+                            "item_name": "Hairpin",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Dodge",
+                            "count": 1
+                        },
+                        "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Sail",
+                            "count": 1
+                        },
+                        "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Harvester",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Striders",
+                            "count": 1
+                        },
+                        "children": null
                     }
                 ]
             }
@@ -44962,93 +46125,136 @@
             "itemName": "Sol & Vin Defeated",
             "saveEntry": "BOSS:TWIN",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
+                            "item_name": "Hairpin",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Dodge",
+                            "count": 1
+                        },
+                        "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Sail",
+                            "count": 1
+                        },
+                        "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Harvester",
+                            "count": 1
+                        },
+                        "children": null
                     }
                 ]
             }
@@ -45061,93 +46267,136 @@
             "itemName": "Vlad Defeated",
             "saveEntry": "BOSS:WASHING_MACHINE",
             "requirements": {
-                "rule": "Or",
+                "rule": "And",
                 "options": [],
                 "args": null,
                 "children": [
                     {
+                        "rule": "Or",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Slash",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Glitch Trail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Afterimage",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Modifier - Firefly",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
+                            "item_name": "Hairpin",
                             "count": 1
                         },
                         "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Glitch Trail",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Sail",
+                            "count": 1
+                        },
+                        "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Hairpin",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Afterimage",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Harvester",
+                            "count": 1
+                        },
+                        "children": null
                     },
                     {
-                        "rule": "And",
+                        "rule": "Has",
                         "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Sail",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Modifier - Firefly",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
+                        "args": {
+                            "item_name": "Dodge",
+                            "count": 1
+                        },
+                        "children": null
                     }
                 ]
             }
