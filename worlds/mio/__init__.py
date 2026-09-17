@@ -39,6 +39,7 @@ class MIOWorld(World):
 
     game = "Memories in Orbit"
     web = MIOWebWorld()
+    author: str = "ShackledMars261"
 
     options_dataclass = MIOOptions
     options: MIOOptions
