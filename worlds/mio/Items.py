@@ -91,7 +91,7 @@ class MIOItem(Item):
 
 
 def get_random_filler_item_name(world: MIOWorld) -> str:
-    return ["Liquid Nacre", "Crystallized Nacre"][world.random.randint(0, 1)]
+    return ["Liquid Nacre", "Crystallised Nacre"][world.random.randint(0, 1)]
 
 
 def create_item_with_correct_classification(world: MIOWorld, name: str) -> MIOItem:
