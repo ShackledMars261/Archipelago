@@ -1,6 +1,6 @@
 {
-    "version": "0.0.102",
-    "timestamp": "1790909684.6135991",
+    "version": "0.0.103",
+    "timestamp": "1791674021.5047007",
     "rooms": [
         {
             "id": 1,
@@ -20110,13 +20110,29 @@
                         "children": null
                     },
                     {
-                        "rule": "Has",
+                        "rule": "Or",
                         "options": [],
-                        "args": {
-                            "item_name": "Harvester",
-                            "count": 1
-                        },
-                        "children": null
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Harvester",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Striders",
+                                    "count": 1
+                                },
+                                "children": null
+                            }
+                        ]
                     }
                 ]
             }
@@ -28252,13 +28268,29 @@
             "toId": 328,
             "toName": "ST_pearl_halyn_C1",
             "requirements": {
-                "rule": "Has",
+                "rule": "And",
                 "options": [],
-                "args": {
-                    "item_name": "Striders",
-                    "count": 1
-                },
-                "children": null
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Striders",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Harvester",
+                            "count": 1
+                        },
+                        "children": null
+                    }
+                ]
             }
         },
         {
@@ -30779,15 +30811,6 @@
                         "rule": "Has",
                         "options": [],
                         "args": {
-                            "item_name": "Slash",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
                             "item_name": "Harvester",
                             "count": 1
                         },
@@ -30861,15 +30884,6 @@
                         "options": [],
                         "args": {
                             "item_name": "Striders",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Slash",
                             "count": 1
                         },
                         "children": null
@@ -44150,13 +44164,29 @@
                         "children": null
                     },
                     {
-                        "rule": "Has",
+                        "rule": "Or",
                         "options": [],
-                        "args": {
-                            "item_name": "Sail",
-                            "count": 1
-                        },
-                        "children": null
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Sail",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Flowing Steps",
+                                    "count": 1
+                                },
+                                "children": null
+                            }
+                        ]
                     },
                     {
                         "rule": "Or",
@@ -46061,15 +46091,6 @@
                         "options": [],
                         "args": {
                             "item_name": "Dodge",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Sail",
                             "count": 1
                         },
                         "children": null
