@@ -74,12 +74,12 @@ def int_to_item_classification(value: int) -> ItemClassification:
             return ItemClassification.progression
 
 
-def item_name_to_classification(world: MIOWorld, name: str) -> ItemClassification | None:
+def item_name_to_classification(world: MIOWorld, name: str) -> ItemClassification:
     items: list[WorldDataItem] = world.data_provider.data.items
     for item in items:
         if item.name == name:
             return int_to_item_classification(item.classification)
-    return None
+    return ItemClassification.progression
 
 
 def build_default_item_classifications_dict(data_provider: DataProvider) -> dict[str, ItemClassification]:
@@ -95,7 +95,7 @@ def get_random_filler_item_name(world: MIOWorld) -> str:
 
 
 def create_item_with_correct_classification(world: MIOWorld, name: str) -> MIOItem:
-    classification = item_name_to_classification(world, name) or ItemClassification.progression
+    classification = item_name_to_classification(world, name)
 
     return MIOItem(name, classification, item_name_to_id(world, name), world.player)
 
