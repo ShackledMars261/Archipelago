@@ -1,6 +1,6 @@
 {
-    "version": "0.0.103",
-    "timestamp": "1791674021.5047007",
+    "version": "0.0.104",
+    "timestamp": "1792126212.4345263",
     "rooms": [
         {
             "id": 1,
@@ -853,7 +853,7 @@
             "locations": [],
             "events": [
                 {
-                    "eventId": 32,
+                    "eventId": 33,
                     "eventLocationName": "GA_bou_center_C1: Above the Enemy Room Candle",
                     "eventItemName": "Find Cos"
                 }
@@ -2082,7 +2082,7 @@
             "locations": [],
             "events": [
                 {
-                    "eventId": 33,
+                    "eventId": 34,
                     "eventLocationName": "GA_bou_transi_F1: \"Other\" Tremor",
                     "eventItemName": "\"Other\" Tremor"
                 }
@@ -2320,7 +2320,7 @@
             "events": [
                 {
                     "eventId": 18,
-                    "eventLocationName": "Shii Defeated",
+                    "eventLocationName": "GA_roof_core: In front of the Precious Samples Room",
                     "eventItemName": "Shii Defeated"
                 }
             ]
@@ -3374,7 +3374,7 @@
             "locations": [],
             "events": [
                 {
-                    "eventId": 34,
+                    "eventId": 35,
                     "eventLocationName": "GA_vin_arom_F2: Talk to Alice",
                     "eventItemName": "Rescue Alice"
                 }
@@ -4693,8 +4693,13 @@
             "events": [
                 {
                     "eventId": 2,
-                    "eventLocationName": "LQ_city_center_F1: Sol & Vin Tremor",
+                    "eventLocationName": "Sol & Vin Tremor",
                     "eventItemName": "Sol & Vin Tremor"
+                },
+                {
+                    "eventId": 32,
+                    "eventLocationName": "LQ_city_center_F1: Hornfell Tremor",
+                    "eventItemName": "Hornfell Tremor"
                 }
             ]
         },
@@ -8677,7 +8682,7 @@
             "locations": [],
             "events": [
                 {
-                    "eventId": 35,
+                    "eventId": 36,
                     "eventLocationName": "ST_pearl_halyn_C2: Wheel Repaired",
                     "eventItemName": "Wheel Repaired"
                 }
@@ -10213,7 +10218,7 @@
             ],
             "events": [
                 {
-                    "eventId": 38,
+                    "eventId": 39,
                     "eventLocationName": "ST_tube_center_C5: Pump #1",
                     "eventItemName": "Pump #1"
                 }
@@ -11085,7 +11090,7 @@
             "locations": [],
             "events": [
                 {
-                    "eventId": 37,
+                    "eventId": 38,
                     "eventLocationName": "ST_tube_hub_P2: Debby Tremor",
                     "eventItemName": "Debby Tremor"
                 }
@@ -11603,7 +11608,7 @@
                     "eventItemName": "Debby Defeated"
                 },
                 {
-                    "eventId": 42,
+                    "eventId": 43,
                     "eventLocationName": "ST_tube_tech_S1: Mel Freed",
                     "eventItemName": "Mel Freed"
                 }
@@ -11800,7 +11805,7 @@
             ],
             "events": [
                 {
-                    "eventId": 40,
+                    "eventId": 41,
                     "eventLocationName": "ST_tube_vanilla_C1: Pump #3",
                     "eventItemName": "Pump #3"
                 }
@@ -11837,7 +11842,7 @@
             ],
             "events": [
                 {
-                    "eventId": 36,
+                    "eventId": 37,
                     "eventLocationName": "ST_tube_vanilla_C2: Mel Kidnapped",
                     "eventItemName": "Mel Kidnapped"
                 }
@@ -11875,7 +11880,7 @@
             "locations": [],
             "events": [
                 {
-                    "eventId": 39,
+                    "eventId": 40,
                     "eventLocationName": "ST_tube_vanilla_C3: Pump #2",
                     "eventItemName": "Pump #2"
                 }
@@ -11910,7 +11915,7 @@
             ],
             "events": [
                 {
-                    "eventId": 41,
+                    "eventId": 42,
                     "eventLocationName": "ST_tube_vanilla_C4: Pump #4",
                     "eventItemName": "Pump #4"
                 }
@@ -15472,9 +15477,12 @@
             "toId": 58,
             "toName": "GA_bou_lower_C2",
             "requirements": {
-                "rule": "False_",
+                "rule": "Has",
                 "options": [],
-                "args": {},
+                "args": {
+                    "item_name": "Striders",
+                    "count": 1
+                },
                 "children": null
             }
         },
@@ -45038,50 +45046,10 @@
             "id": 2,
             "roomId": 171,
             "roomName": "LQ_city_center_F1",
-            "locationName": "LQ_city_center_F1: Sol & Vin Tremor",
+            "locationName": "Sol & Vin Tremor",
             "itemName": "Sol & Vin Tremor",
-            "saveEntry": "HEART_ATTACK:HORNFELL",
-            "requirements": {
-                "rule": "Or",
-                "options": [],
-                "args": null,
-                "children": [
-                    {
-                        "rule": "Has",
-                        "options": [],
-                        "args": {
-                            "item_name": "Liho's Voice",
-                            "count": 1
-                        },
-                        "children": null
-                    },
-                    {
-                        "rule": "And",
-                        "options": [],
-                        "args": null,
-                        "children": [
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Amytis' Voice",
-                                    "count": 1
-                                },
-                                "children": null
-                            },
-                            {
-                                "rule": "Has",
-                                "options": [],
-                                "args": {
-                                    "item_name": "Calderon Defeated",
-                                    "count": 1
-                                },
-                                "children": null
-                            }
-                        ]
-                    }
-                ]
-            }
+            "saveEntry": "",
+            "requirements": null
         },
         {
             "id": 3,
@@ -46721,9 +46689,9 @@
             "id": 18,
             "roomId": 79,
             "roomName": "GA_roof_core",
-            "locationName": "Shii Defeated",
+            "locationName": "GA_roof_core: In front of the Precious Samples Room",
             "itemName": "Shii Defeated",
-            "saveEntry": "",
+            "saveEntry": "BOSS:SHII",
             "requirements": {
                 "rule": "And",
                 "options": [],
@@ -47324,6 +47292,55 @@
         },
         {
             "id": 32,
+            "roomId": 171,
+            "roomName": "LQ_city_center_F1",
+            "locationName": "LQ_city_center_F1: Hornfell Tremor",
+            "itemName": "Hornfell Tremor",
+            "saveEntry": "HEART_ATTACK:HORNFELL",
+            "requirements": {
+                "rule": "Or",
+                "options": [],
+                "args": null,
+                "children": [
+                    {
+                        "rule": "Has",
+                        "options": [],
+                        "args": {
+                            "item_name": "Liho's Voice",
+                            "count": 1
+                        },
+                        "children": null
+                    },
+                    {
+                        "rule": "And",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Amytis' Voice",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Calderon Defeated",
+                                    "count": 1
+                                },
+                                "children": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 33,
             "roomId": 25,
             "roomName": "GA_bou_center_C1",
             "locationName": "GA_bou_center_C1: Above the Enemy Room Candle",
@@ -47340,7 +47357,7 @@
             }
         },
         {
-            "id": 33,
+            "id": 34,
             "roomId": 70,
             "roomName": "GA_bou_transi_F1",
             "locationName": "GA_bou_transi_F1: \"Other\" Tremor",
@@ -47349,7 +47366,7 @@
             "requirements": null
         },
         {
-            "id": 34,
+            "id": 35,
             "roomId": 119,
             "roomName": "GA_vin_arom_F2",
             "locationName": "GA_vin_arom_F2: Talk to Alice",
@@ -47366,7 +47383,7 @@
             }
         },
         {
-            "id": 35,
+            "id": 36,
             "roomId": 329,
             "roomName": "ST_pearl_halyn_C2",
             "locationName": "ST_pearl_halyn_C2: Wheel Repaired",
@@ -47383,7 +47400,7 @@
             }
         },
         {
-            "id": 36,
+            "id": 37,
             "roomId": 443,
             "roomName": "ST_tube_vanilla_C2",
             "locationName": "ST_tube_vanilla_C2: Mel Kidnapped",
@@ -47432,7 +47449,7 @@
             }
         },
         {
-            "id": 37,
+            "id": 38,
             "roomId": 418,
             "roomName": "ST_tube_hub_P2",
             "locationName": "ST_tube_hub_P2: Debby Tremor",
@@ -47441,7 +47458,7 @@
             "requirements": null
         },
         {
-            "id": 38,
+            "id": 39,
             "roomId": 384,
             "roomName": "ST_tube_center_C5",
             "locationName": "ST_tube_center_C5: Pump #1",
@@ -47450,7 +47467,7 @@
             "requirements": null
         },
         {
-            "id": 39,
+            "id": 40,
             "roomId": 444,
             "roomName": "ST_tube_vanilla_C3",
             "locationName": "ST_tube_vanilla_C3: Pump #2",
@@ -47508,7 +47525,7 @@
             }
         },
         {
-            "id": 40,
+            "id": 41,
             "roomId": 442,
             "roomName": "ST_tube_vanilla_C1",
             "locationName": "ST_tube_vanilla_C1: Pump #3",
@@ -47517,7 +47534,7 @@
             "requirements": null
         },
         {
-            "id": 41,
+            "id": 42,
             "roomId": 445,
             "roomName": "ST_tube_vanilla_C4",
             "locationName": "ST_tube_vanilla_C4: Pump #4",
@@ -47534,7 +47551,7 @@
             }
         },
         {
-            "id": 42,
+            "id": 43,
             "roomId": 435,
             "roomName": "ST_tube_tech_S1",
             "locationName": "ST_tube_tech_S1: Mel Freed",
@@ -48211,7 +48228,7 @@
             "id": 33,
             "name": "Gloomwater Report",
             "classification": 1,
-            "saveEntry": "KEY:CRUCIBLE_GLOOMWATER",
+            "saveEntry": "DIALOG:TXT_CRUCIBLE_DATAREPORT_GLOOMWATER",
             "count": 1,
             "vanillaLocations": [
                 {
@@ -48224,7 +48241,7 @@
             "id": 34,
             "name": "Crystallisation Report",
             "classification": 1,
-            "saveEntry": "KEY:CRUCIBLE_CRYSTAL",
+            "saveEntry": "DIALOG:TXT_CRUCIBLE_DATAREPORT_CRYSTALLISATION",
             "count": 1,
             "vanillaLocations": [
                 {
