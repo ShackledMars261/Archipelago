@@ -1,6 +1,6 @@
 {
-    "version": "0.0.104",
-    "timestamp": "1792126212.4345263",
+    "version": "0.0.105",
+    "timestamp": "1792129799.8845035",
     "rooms": [
         {
             "id": 1,
@@ -48228,7 +48228,7 @@
             "id": 33,
             "name": "Gloomwater Report",
             "classification": 1,
-            "saveEntry": "DIALOG:TXT_CRUCIBLE_DATAREPORT_GLOOMWATER",
+            "saveEntry": "KEY:CRUCIBLE_GLOOMWATER",
             "count": 1,
             "vanillaLocations": [
                 {
@@ -48241,7 +48241,7 @@
             "id": 34,
             "name": "Crystallisation Report",
             "classification": 1,
-            "saveEntry": "DIALOG:TXT_CRUCIBLE_DATAREPORT_CRYSTALLISATION",
+            "saveEntry": "KEY:CRUCIBLE_CRYSTAL",
             "count": 1,
             "vanillaLocations": [
                 {
