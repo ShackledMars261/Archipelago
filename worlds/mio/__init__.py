@@ -71,4 +71,10 @@ class MIOWorld(World):
         return self.options.as_dict(
             "logic_difficulty",
             "boss_kill_checks",
+
+            "death_link",
+            "death_link_amnesty",
+            "death_link_grace",
+            "knockback_link",
+            "damage_link"
         )

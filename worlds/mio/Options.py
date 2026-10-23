@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle
+from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle, Range
 
 
 class BossKillChecks(Toggle):
@@ -34,17 +34,78 @@ class RandomizeStartingItems(Toggle):
     display_name = "Randomize Starting Items"
 
 
+class DeathLink(Toggle):
+    """
+    Toggles DeathLink for this player.
+    """
+
+    display_name = "DeathLink"
+    default = False
+
+
+class DeathLinkAmnesty(Range):
+    """
+    The amount of deaths needed to send a DeathLink.
+    """
+
+    display_name = "DeathLink Amnesty"
+    range_start = 1
+    range_end = 20
+    default = 1
+
+
+class DeathLinkGrace(Range):
+    """
+    The amount of DeathLinks required for mio to die.
+    """
+
+    display_name = "DeathLink Grace"
+    range_start = 1
+    range_end = 20
+    default = 1
+
+
+class KnockbackLink(Toggle):
+    """
+    Toggles KnockbackLink for the player.
+    This implementation currently does not send it, only receives.
+    """
+
+    display_name = "KnockbackLink"
+    default = False
+
+
+class DamageLink(Toggle):
+    """
+    Toggles DamageLink for the player.
+    DamageLink will only take away shields, and won't count death as one to send.
+    """
+
+    display_name = "DamageLink"
+    default = False
+
+
 @dataclass
 class MIOOptions(PerGameCommonOptions):
     logic_difficulty: LogicDifficulty
     boss_kill_checks: BossKillChecks
     randomize_starting_items: RandomizeStartingItems
 
+    death_link: DeathLink
+    death_link_amnesty: DeathLinkAmnesty
+    death_link_grace: DeathLinkGrace
+    knockback_link: KnockbackLink
+    damage_link: DamageLink
+
 
 option_groups = [
     OptionGroup(
         "Gameplay Options",
         [LogicDifficulty, BossKillChecks, RandomizeStartingItems],
+    ),
+    OptionGroup(
+        "Links (Protocols)",
+        [DeathLink, DeathLinkAmnesty, DeathLinkGrace, KnockbackLink, DamageLink],
     ),
 ]
 
