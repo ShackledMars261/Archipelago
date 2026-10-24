@@ -34,6 +34,20 @@ class RandomizeStartingItems(Toggle):
     display_name = "Randomize Starting Items"
 
 
+class StartingRoom(Choice):
+    """
+    Start the game from a different room than usual.
+    """
+
+    display_name = "Starting Room"
+    option_ST_security_fall_P1 = 0
+    option_LQ_city_hall_C2 = 1
+    option_GA_vin_terrace_P3 = 2
+    option_LQ_vin_intro = 3
+    option_GA_root_conex_P2 = 4
+    default = 0
+
+
 class DeathLink(Toggle):
     """
     Toggles DeathLink for this player.
@@ -90,6 +104,7 @@ class MIOOptions(PerGameCommonOptions):
     logic_difficulty: LogicDifficulty
     boss_kill_checks: BossKillChecks
     randomize_starting_items: RandomizeStartingItems
+    starting_room: StartingRoom
 
     death_link: DeathLink
     death_link_amnesty: DeathLinkAmnesty
@@ -101,7 +116,7 @@ class MIOOptions(PerGameCommonOptions):
 option_groups = [
     OptionGroup(
         "Gameplay Options",
-        [LogicDifficulty, BossKillChecks, RandomizeStartingItems],
+        [LogicDifficulty, BossKillChecks, RandomizeStartingItems, StartingRoom],
     ),
     OptionGroup(
         "Links (Protocols)",
