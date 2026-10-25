@@ -1,7 +1,7 @@
 from collections.abc import Mapping
 from typing import Any
 
-from BaseClasses import Tutorial
+from BaseClasses import Tutorial, Region
 from worlds.AutoWorld import WebWorld, World
 
 from .DataProvider import DataProvider
@@ -44,7 +44,7 @@ class MIOWorld(World):
     options_dataclass = MIOOptions
     options: MIOOptions
 
-    origin_region_name = "ST_security_fall_P1"
+    origin_region_name = "Menu"
 
     data_provider: DataProvider = DataProvider()
 
@@ -54,6 +54,12 @@ class MIOWorld(World):
     def create_regions(self) -> None:
         create_and_connect_regions(self)
         create_all_locations(self)
+
+        self.multiworld.regions.append(Region("Menu", self.player, self.multiworld))
+        room_id = MIOWorld.convert_room_id(self.options.starting_room.get_option_name(self.options.starting_room.value))
+        self.get_region("Menu").add_exits({room_id: "Start"})
+
+        self.get_location("ST_security_fall_P1: Starting Item (Slash)").parent_region = self.get_region("Menu")
 
     def set_rules(self) -> None:
         set_all_rules(self)
@@ -71,4 +77,19 @@ class MIOWorld(World):
         return self.options.as_dict(
             "logic_difficulty",
             "boss_kill_checks",
+            "starting_room",
+
+            "death_link",
+            "death_link_amnesty",
+            "death_link_grace",
+            "knockback_link",
+            "damage_link"
         )
+
+    @staticmethod
+    def convert_room_id(room_id: str):
+        split = room_id.split(" ")
+        parts = [split[0].upper(), split[1].lower(), split[2].lower()]
+        if len(split) > 3:
+            parts.append(split[3].upper())
+        return "_".join(parts)
