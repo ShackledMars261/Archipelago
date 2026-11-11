@@ -262,6 +262,73 @@ class DamageLink(Toggle):
     default = False
 
 
+
+class Modsanity(Toggle):
+    """
+    Whether costs of specific trinkets should be randomized.
+    If disabled, all options in this section are ignored.
+    """
+    display_name = "Modsanity"
+    default = False
+
+class MixPositiveNegative(Toggle):
+    """
+    If enabled, modifiers which have positive cost in the base game will be randomized in the same pool with modifiers which usually have negative cost.
+    If disabled, positive cost modifiers and negative cost modifiers will be randomized in separate pools. Negative cost modifiers will not be given positive costs and vice versa.
+    This option is ignored if either of "Total Positive Modifier Cost" and "Total Negative Modifier Cost" is set to -2 or unshuffled.
+    """
+
+    display_name = "Mix Positive and Negative Modifiers"
+    default = False
+
+
+class NegativeModifierCount(Range):
+    """
+    The number of modifiers which will be given negative costs. Ignored if either of "Total Positive Modifer Cost" and "Total Negative Modifier Cost" is set to -1 or -2 (vanilla costs are used).
+    """
+
+    display_name = "Negative Modifier Count"
+    range_start = 0
+    range_end = 42
+    default = 7
+
+
+class TotalPositiveModiferCost(Range):
+    """
+    The modifier slot cost of all positive modifiers. Vanilla is 730 and without negative modifiers you can have up to 95 slots.
+    If "Mix Positive and Negative Modifiers" is enabled, this is the sum of costs of all modifiers with positive cost.
+    Set to -1 or shuffle to shuffle the vanilla costs to different modifiers.
+    Set to -2 or unshuffle to assign the original cost to all positive modifiers.
+    """
+
+    display_name = "Total Positive Modifier Cost"
+    special_range_names = {
+        "shuffle": -1,
+        "unshuffled": -2
+    }
+    range_start = 0
+    range_end = 2000
+    default = 730
+
+
+class TotalNegativeModiferCost(Range):
+    """
+    The negative of the sum of slot costs of all negative modifiers. Vanilla is 115.
+    If "Mix Positive and Negative Modifiers" is enabled, this is the sum of costs of all modifiers with negative cost.
+    Set to -1 or shuffle to shuffle the vanilla costs to different modifiers.
+    Set to -2 or unshuffle to assign the original cost to all positive modifiers.
+    """
+
+    display_name = "Total negative Modifier Cost"
+    special_range_names = {
+        "shuffle": -1,
+        "unshuffled": -2
+    }
+    range_start = 0
+    range_end = 2000
+    default = 115
+
+
 @dataclass
 class MIOOptions(PerGameCommonOptions):
     logic_difficulty: LogicDifficulty
@@ -283,6 +350,11 @@ class MIOOptions(PerGameCommonOptions):
     knockback_link: KnockbackLink
     damage_link: DamageLink
 
+    modsanity: Modsanity
+    mix_positive_negative: MixPositiveNegative
+    negative_modifier_count: NegativeModifierCount
+    total_positive_modifier_cost: TotalPositiveModiferCost
+    total_negative_modifier_cost: TotalNegativeModiferCost
 
 mio_option_groups = [
     OptionGroup(
@@ -297,6 +369,10 @@ mio_option_groups = [
         "Links (Protocols)",
         [DeathLink, DeathLinkAmnesty, DeathLinkGrace, KnockbackLink, DamageLink],
     ),
+    OptionGroup(
+        "Modsanity",
+        [Modsanity, MixPositiveNegative, NegativeModifierCount, TotalPositiveModiferCost, TotalNegativeModiferCost,],
+    )
 ]
 
 option_presets = {}
