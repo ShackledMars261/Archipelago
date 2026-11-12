@@ -36,20 +36,19 @@ class LogicDifficulty(Choice):
 
 class BossDifficulty(Choice):
     """
-    The difficulty of logic for bosses. The exact requirements
-    vary for each difficulty and boss.
-    - intended: Logic assumes primarily what would be available
-        and used commonly.
+    The difficulty of logic for bosses. The exact requirements vary for each
+    difficulty and boss.
+    - intended: Logic assumes primarily what would be available and used
+        commonly.
     - difficult: Logic assumes fewer useful items for bosses.
-    - possible: Logic assumes only the theoretical minimum
-        loadout for bosses to be defeated hitless.
+    - possible: Logic assumes only the theoretical minimum loadout for bosses to
+        be defeated hitless.
 
-    NOTE: randomizing Slash and enabling "Slashless Combat"
-        will make even intended logic more difficult. 
+    NOTE: randomizing Slash and enabling "Slashless Combat" will make even
+        intended logic more difficult.
 
-    NOTE: difficult and possible boss difficulty levels should
-        be considered experimental (moreso than the rest of
-        the randomizer)
+    NOTE: difficult and possible boss difficulty levels should be considered
+        experimental (moreso than the rest of the randomizer)
     """
 
     display_name = "Boss Difficulty"
@@ -72,10 +71,9 @@ class SlashlessCombat(Toggle):
     """
     Does nothing when "Randomize Starting Items" is disabled.
 
-    When enabled, logic will not require Slash except
-    where a combat scenario is not completable otherwise. 
-    When disabled, logic will not assume anything to be
-    killable without Slash.
+    When enabled, logic will not require Slash except where a combat scenario is
+    not completable otherwise.  When disabled, logic will not assume anything to
+    be killable without Slash.
     """
 
     display_name = "Allow Slashless Combat"
@@ -99,18 +97,15 @@ class AirstallLevel(Choice):
     - none: airstalling is logically disabled
     - airstalling: attacking mid-air to reset vertical momentum
         - may require other items such as dodge situationally
-    - crystal stall: in addition to airstalling for distance
-        require airstalling in place long enough to hit a
-        single crystal/flower/ bomb multiple times to gain
-        additional height
-    - wall climb: in addition to crystal stalling, airstalling
-        against a steeply sloped surface may be required to
-        gain additional height
+    - crystal stall: in addition to airstalling for distance require airstalling
+        in place long enough to hit a single crystal/flower/ bomb multiple times
+        to gain additional height
+    - wall climb: in addition to crystal stalling, airstalling against a steeply
+        sloped surface may be required to gain additional height
 
-    NOTE: Some skips may not have been properly categorized
-        in the logic writing process. If you have disabled a
-        skip and it appears to be logically required, please
-        report this as a bug!
+    NOTE: Some skips may not have been properly categorized in the logic writing
+        process. If you have disabled a skip and it appears to be logically
+        required, please report this as a bug!
     """
     display_name = "Airstalling"
     option_none = 0
@@ -123,16 +118,15 @@ class EnemyPogoLevel(Choice):
     """
     Applies to simple and advanced skips
     - none: enemy pogo's are not logically required
-    - pogo: slashing enemies to reset jumps and gain height
-        may be logically required
-    - lure: luring enemys far away from their starting
-        location to pogo them where there would otherwise
-        be no enemies may be required (advanced skips only)
+    - pogo: slashing enemies to reset jumps and gain height may be logically
+        required
+    - lure: luring enemys far away from their starting location to pogo them
+        where there would otherwise be no enemies may be required (advanced
+        skips only)
 
-    NOTE: Some skips may not have been properly categorized
-        in the logic writing process. If you have disabled a
-        skip and it appears to be logically required, please
-        report this as a bug!
+    NOTE: Some skips may not have been properly categorized in the logic writing
+        process. If you have disabled a skip and it appears to be logically
+        required, please report this as a bug!
     """
     display_name = "Enemy Pogos"
     option_none = 0
@@ -144,39 +138,31 @@ class MovementLevel(Choice):
     """
     Applies to simple skips and advanced skips
     - none: little to no movement tech required logically
-    - general: movement tech which is easy to learn and
-        useful practically anywhere may be logically
-        required
-        - ground pogos: striking the ground immediately
-            prior to a jump slightly increases jump height
-        - super spring: jumping upon walking into a bumper
-            increases the bounce height without consuming
-            your double jump
-        - stroost: using dodge while stridering gives the
-            player a boost in speed allowing you to
-            move further before running out of energy
-        - strider triple: holding up, then holding striders
-            and jumping at the right time greatly increases
-            jump height without consuming energy
-    - situational: general movement as well as tech which
-        is more difficult to learn/master and is less
-        prevelant in logic requirements
-        - slope boost: downward diving into a sloped surface
-            can give Mio a lot of horizontal momentum such
-            as in the bunker door skip with only striders
-            (and no slash)
-        - hairpin launch: releasing hairpin at the right
-            moment can give Mio an extra powerful boost
-            in the direction of the hairpin
-    - tedious: situational movement which may be difficult
-        to replicate and come at high risk
-        - laser_skip: in certain situations Mio can pass
-            through lasers by timing a chained attack properly
+    - general: movement tech which is easy to learn and useful practically
+        anywhere may be logically required
+        - ground pogos: striking the ground immediately prior to a jump slightly
+            increases jump height
+        - super spring: jumping upon walking into a bumper increases the bounce
+            height without consuming your double jump
+        - stroost: using dodge while stridering gives the player a boost in
+            speed allowing you to move further before running out of energy
+        - strider triple: holding up, then holding striders and jumping at the
+            right time greatly increases jump height without consuming energy
+    - situational: general movement as well as tech which is more difficult to
+        learn/master and is less prevelant in logic requirements
+        - slope boost: downward diving into a sloped surface can give Mio a lot
+            of horizontal momentum such as in the bunker door skip with only
+            striders (and no slash)
+        - hairpin launch: releasing hairpin at the right moment can give Mio an
+            extra powerful boost in the direction of the hairpin
+    - tedious: situational movement which may be difficult to replicate and come
+        at high risk
+        - laser_skip: in certain situations Mio can pass through lasers by
+            timing a chained attack properly
 
-    NOTE: Some skips may not have been properly categorized
-        in the logic writing process. If you have disabled a
-        skip and it appears to be logically required, please
-        report this as a bug!
+    NOTE: Some skips may not have been properly categorized in the logic writing
+        process. If you have disabled a skip and it appears to be logically
+        required, please report this as a bug!
     """
     display_name = "Movement Tech"
     option_none = 0
@@ -188,14 +174,12 @@ class MovementLevel(Choice):
 class HazardSkips(Toggle):
     """
     Applies to simple skips
-    If enabled logic may require standing or respawning
-    in areas which look unsafe, or using striders on solid
-    surfaces which are covered in hazards
+    If enabled logic may require standing or respawning in areas which look
+    unsafe, or using striders on solid surfaces which are covered in hazards
 
-    NOTE: Some skips may not have been properly categorized
-        in the logic writing process. If you have disabled a
-        skip and it appears to be logically required, please
-        report this as a bug!
+    NOTE: Some skips may not have been properly categorized in the logic writing
+        process. If you have disabled a skip and it appears to be logically
+        required, please report this as a bug!
     """
     display_name = "Hazard Respawn and Stridering"
 
@@ -204,8 +188,7 @@ class FlowerWarps(Toggle):
     """
     Applies to advanced skips
     If enabled logic may require using flower warps
-    NOTE: almost none of the known flower warps are
-        implemented logically
+    NOTE: almost none of the known flower warps are implemented logically
     """
     display_name = "Flower Warps"
 
@@ -265,17 +248,21 @@ class DamageLink(Toggle):
 
 class Modsanity(Toggle):
     """
-    Whether costs of specific trinkets should be randomized.
-    If disabled, all options in this section are ignored.
+    Whether costs of specific trinkets should be randomized. If disabled, all
+    options in this section are ignored.
     """
     display_name = "Modsanity"
     default = False
 
 class MixPositiveNegative(Toggle):
     """
-    If enabled, modifiers which have positive cost in the base game will be randomized in the same pool with modifiers which usually have negative cost.
-    If disabled, positive cost modifiers and negative cost modifiers will be randomized in separate pools. Negative cost modifiers will not be given positive costs and vice versa.
-    This option is ignored if either of "Total Positive Modifier Cost" and "Total Negative Modifier Cost" is set to -2 or unshuffled.
+    If enabled, modifiers which have positive cost in the base game will be
+    randomized in the same pool with modifiers which usually have negative cost.
+    If disabled, positive cost modifiers and negative cost modifiers will be
+    randomized in separate pools. Negative cost modifiers will not be given
+    positive costs and vice versa.
+    This option is ignored if either of "Total Positive Modifier Cost" and
+    "Total Negative Modifier Cost" is set to -2 or unshuffled.
     """
 
     display_name = "Mix Positive and Negative Modifiers"
@@ -284,7 +271,9 @@ class MixPositiveNegative(Toggle):
 
 class NegativeModifierCount(Range):
     """
-    The number of modifiers which will be given negative costs. Ignored if either of "Total Positive Modifer Cost" and "Total Negative Modifier Cost" is set to -1 or -2 (vanilla costs are used).
+    The number of modifiers which will be given negative costs. Ignored if
+    either of "Total Positive Modifer Cost" and "Total Negative Modifier Cost"
+    is set to -1 or -2 (vanilla costs are used).
     """
 
     display_name = "Negative Modifier Count"
@@ -295,10 +284,13 @@ class NegativeModifierCount(Range):
 
 class TotalPositiveModiferCost(Range):
     """
-    The modifier slot cost of all positive modifiers. Vanilla is 730 and without negative modifiers you can have up to 95 slots.
-    If "Mix Positive and Negative Modifiers" is enabled, this is the sum of costs of all modifiers with positive cost.
+    The modifier slot cost of all positive modifiers. Vanilla is 730 and without
+    negative modifiers you can have up to 95 slots.
+    If "Mix Positive and Negative Modifiers" is enabled, this is the sum of
+    costs of all modifiers with positive cost.
     Set to -1 or shuffle to shuffle the vanilla costs to different modifiers.
-    Set to -2 or unshuffle to assign the original cost to all positive modifiers.
+    Set to -2 or unshuffle to assign the original cost to all positive
+    modifiers.
     """
 
     display_name = "Total Positive Modifier Cost"
@@ -313,10 +305,13 @@ class TotalPositiveModiferCost(Range):
 
 class TotalNegativeModiferCost(Range):
     """
-    The negative of the sum of slot costs of all negative modifiers. Vanilla is 115.
-    If "Mix Positive and Negative Modifiers" is enabled, this is the sum of costs of all modifiers with negative cost.
+    The negative of the sum of slot costs of all negative modifiers. Vanilla is
+    115.
+    If "Mix Positive and Negative Modifiers" is enabled, this is the sum of
+    costs of all modifiers with negative cost.
     Set to -1 or shuffle to shuffle the vanilla costs to different modifiers.
-    Set to -2 or unshuffle to assign the original cost to all positive modifiers.
+    Set to -2 or unshuffle to assign the original cost to all positive
+    modifiers.
     """
 
     display_name = "Total negative Modifier Cost"
