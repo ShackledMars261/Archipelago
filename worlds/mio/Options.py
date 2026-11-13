@@ -47,6 +47,16 @@ class StartingRoom(Choice):
     option_GA_root_conex_P2 = 4
     default = 0
 
+class FastTravelUnlock(Toggle):
+    """
+    If enabled, receiving a torn overseer will also unlock teleporting to it
+    through the overseer network even if you haven't sat at the corresponding
+    overseer previously.
+    If disabled, torn overseers behave as in vanilla.
+    """
+
+    display_name = "Fast Travel Unlock"
+    default = True
 
 class DeathLink(Toggle):
     """
@@ -105,6 +115,7 @@ class MIOOptions(PerGameCommonOptions):
     boss_kill_checks: BossKillChecks
     randomize_starting_items: RandomizeStartingItems
     starting_room: StartingRoom
+    fast_travel_unlock: FastTravelUnlock
 
     death_link: DeathLink
     death_link_amnesty: DeathLinkAmnesty
@@ -116,7 +127,7 @@ class MIOOptions(PerGameCommonOptions):
 option_groups = [
     OptionGroup(
         "Gameplay Options",
-        [LogicDifficulty, BossKillChecks, RandomizeStartingItems, StartingRoom],
+        [LogicDifficulty, BossKillChecks, RandomizeStartingItems, StartingRoom, FastTravelUnlock],
     ),
     OptionGroup(
         "Links (Protocols)",
