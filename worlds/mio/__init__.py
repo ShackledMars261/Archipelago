@@ -13,7 +13,7 @@ from .Items import (
     get_random_filler_item_name,
 )
 from .Locations import build_location_name_to_id_dict, create_all_locations
-from .Options import MIOOptions
+from .Options import MIOOptions, mio_option_groups
 from .Regions import create_and_connect_regions
 from .Rules import set_all_rules
 
@@ -30,6 +30,7 @@ class MIOWebWorld(WebWorld):
             ["ShackledMars261"],
         )
     ]
+    option_groups = mio_option_groups
 
 
 class MIOWorld(World):
