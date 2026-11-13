@@ -47,16 +47,21 @@ class StartingRoom(Choice):
     option_GA_root_conex_P2 = 4
     default = 0
 
+
 class FastTravelUnlock(Toggle):
     """
     If enabled, receiving a torn overseer will also unlock teleporting to it
     through the overseer network even if you haven't sat at the corresponding
     overseer previously.
     If disabled, torn overseers behave as in vanilla.
+
+    NOTE: Logic currently does not consider fast travel unlocked by this
+        setting.
     """
 
     display_name = "Fast Travel Unlock"
     default = True
+
 
 class DeathLink(Toggle):
     """
