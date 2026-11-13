@@ -194,6 +194,21 @@ class FlowerWarps(Toggle):
 
 
 
+class FastTravelUnlock(Toggle):
+    """
+    If enabled, receiving a torn overseer will also unlock teleporting to it
+    through the overseer network even if you haven't sat at the corresponding
+    overseer previously.
+    If disabled, torn overseers behave as in vanilla.
+
+    NOTE: Logic currently does not consider fast travel unlocked by this
+        setting.
+    """
+
+    display_name = "Fast Travel Unlock"
+    default = True
+
+
 class DeathLink(Toggle):
     """
     Toggles DeathLink for this player.
@@ -332,6 +347,7 @@ class MIOOptions(PerGameCommonOptions):
     randomize_starting_items: RandomizeStartingItems
     slashless_combat: SlashlessCombat
     starting_room: StartingRoom
+    fast_travel_unlock: FastTravelUnlock
 
     movement_level: MovementLevel
     airstall_level: AirstallLevel
@@ -354,7 +370,7 @@ class MIOOptions(PerGameCommonOptions):
 mio_option_groups = [
     OptionGroup(
         "Game Options",
-        [LogicDifficulty, BossDifficulty, BossKillChecks, RandomizeStartingItems, SlashlessCombat, StartingRoom],
+        [LogicDifficulty, BossDifficulty, BossKillChecks, RandomizeStartingItems, SlashlessCombat, StartingRoom, FastTravelUnlock],
     ),
     OptionGroup(
         "Skip Settings",
