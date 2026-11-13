@@ -13,9 +13,10 @@ from .Items import (
     get_random_filler_item_name,
 )
 from .Locations import build_location_name_to_id_dict, create_all_locations
-from .Options import MIOOptions
+from .Options import MIOOptions, mio_option_groups
 from .Regions import create_and_connect_regions
 from .Rules import set_all_rules
+from .Trinkets import get_trinket_costs, default_trinket_costs
 
 
 class MIOWebWorld(WebWorld):
@@ -30,6 +31,7 @@ class MIOWebWorld(WebWorld):
             ["ShackledMars261"],
         )
     ]
+    option_groups = mio_option_groups
 
 
 class MIOWorld(World):
@@ -51,6 +53,8 @@ class MIOWorld(World):
     item_name_to_id = build_item_name_to_id_dict(data_provider)
     location_name_to_id = build_location_name_to_id_dict(data_provider)
 
+    trinket_costs = default_trinket_costs()
+    
     def create_regions(self) -> None:
         create_and_connect_regions(self)
         create_all_locations(self)
@@ -64,6 +68,16 @@ class MIOWorld(World):
     def set_rules(self) -> None:
         set_all_rules(self)
 
+    def generate_early(self):
+        if not self.options.modsanity.value: return
+        self.trinket_costs = get_trinket_costs(
+                  self.random,
+                  self.options.mix_positive_negative.value,
+                  self.options.total_positive_modifier_cost.value,
+                  self.options.total_negative_modifier_cost.value,
+                  self.options.negative_modifier_count.value
+              )
+
     def create_items(self) -> None:
         create_all_items(self)
 
@@ -74,7 +88,7 @@ class MIOWorld(World):
         return get_random_filler_item_name(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
-        return self.options.as_dict(
+        out = self.options.as_dict(
             "logic_difficulty",
             "boss_kill_checks",
             "starting_room",
@@ -86,6 +100,9 @@ class MIOWorld(World):
             "knockback_link",
             "damage_link"
         )
+        out["trinket_costs"] = self.trinket_costs
+        return out
+
 
     @staticmethod
     def convert_room_id(room_id: str):
