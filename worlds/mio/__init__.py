@@ -78,6 +78,7 @@ class MIOWorld(World):
             "logic_difficulty",
             "boss_kill_checks",
             "starting_room",
+            "fast_travel_unlock",
 
             "death_link",
             "death_link_amnesty",
