@@ -1,6 +1,6 @@
 {
-    "version": "0.0.118",
-    "timestamp": "1794446773.280979168",
+    "version": "0.0.122",
+    "timestamp": "1795390611.5442864",
     "rooms": [
         {
             "id": 1,
@@ -7080,12 +7080,7 @@
                     "linkedRoomName": "LQ_under_chall_P1"
                 }
             ],
-            "locations": [
-                {
-                    "locationId": 59,
-                    "locationName": "LQ_under_chall_C3: Top-left corner of the room"
-                }
-            ],
+            "locations": [],
             "events": []
         },
         {
@@ -24026,6 +24021,15 @@
                                             "count": 1
                                         },
                                         "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
                                     }
                                 ]
                             }
@@ -25825,6 +25829,97 @@
                                 "children": null
                             },
                             {
+                                "rule": "Or",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "And",
+                                        "options": [
+                                            {
+                                                "option": "worlds.mio.Options.MovementLevel",
+                                                "value": 1,
+                                                "operator": "ge"
+                                            }
+                                        ],
+                                        "args": null,
+                                        "children": [
+                                            {
+                                                "rule": "Has",
+                                                "options": [],
+                                                "args": {
+                                                    "item_name": "Striders",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            },
+                                            {
+                                                "rule": "Has",
+                                                "options": [],
+                                                "args": {
+                                                    "item_name": "Dodge",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "And",
+                                        "options": [],
+                                        "args": null,
+                                        "children": [
+                                            {
+                                                "rule": "Has",
+                                                "options": [],
+                                                "args": {
+                                                    "item_name": "Striders",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            },
+                                            {
+                                                "rule": "Has",
+                                                "options": [],
+                                                "args": {
+                                                    "item_name": "Slash",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "rule": "And",
+                        "options": [],
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "True_",
+                                "options": [
+                                    {
+                                        "option": "worlds.mio.Options.LogicDifficulty",
+                                        "value": 2,
+                                        "operator": "ge"
+                                    }
+                                ],
+                                "args": {},
+                                "children": null
+                            },
+                            {
                                 "rule": "And",
                                 "options": [],
                                 "args": null,
@@ -25839,24 +25934,33 @@
                                         "children": null
                                     },
                                     {
-                                        "rule": "Or",
+                                        "rule": "And",
                                         "options": [],
                                         "args": null,
                                         "children": [
                                             {
-                                                "rule": "Has",
-                                                "options": [],
-                                                "args": {
-                                                    "item_name": "Slash",
-                                                    "count": 1
-                                                },
+                                                "rule": "True_",
+                                                "options": [
+                                                    {
+                                                        "option": "worlds.mio.Options.MovementLevel",
+                                                        "value": 2,
+                                                        "operator": "ge"
+                                                    }
+                                                ],
+                                                "args": {},
                                                 "children": null
                                             },
                                             {
                                                 "rule": "Has",
-                                                "options": [],
+                                                "options": [
+                                                    {
+                                                        "option": "worlds.mio.Options.EnemyPogoLevel",
+                                                        "value": 1,
+                                                        "operator": "ge"
+                                                    }
+                                                ],
                                                 "args": {
-                                                    "item_name": "Dodge",
+                                                    "item_name": "Slash",
                                                     "count": 1
                                                 },
                                                 "children": null
@@ -27394,6 +27498,15 @@
                                     "count": 1
                                 },
                                 "children": null
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Shii Fully Awakened",
+                                    "count": 1
+                                },
+                                "children": null
                             }
                         ]
                     },
@@ -28476,6 +28589,43 @@
                                                 ],
                                                 "args": {
                                                     "item_name": "Striders",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "rule": "And",
+                                        "options": [],
+                                        "args": null,
+                                        "children": [
+                                            {
+                                                "rule": "Has",
+                                                "options": [
+                                                    {
+                                                        "option": "worlds.mio.Options.MovementLevel",
+                                                        "value": 1,
+                                                        "operator": "ge"
+                                                    }
+                                                ],
+                                                "args": {
+                                                    "item_name": "Slash",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            },
+                                            {
+                                                "rule": "Has",
+                                                "options": [
+                                                    {
+                                                        "option": "worlds.mio.Options.AirstallLevel",
+                                                        "value": 2,
+                                                        "operator": "ge"
+                                                    }
+                                                ],
+                                                "args": {
+                                                    "item_name": "Slash",
                                                     "count": 1
                                                 },
                                                 "children": null
@@ -44172,13 +44322,45 @@
                 "args": null,
                 "children": [
                     {
-                        "rule": "Has",
+                        "rule": "Or",
                         "options": [],
-                        "args": {
-                            "item_name": "Striders",
-                            "count": 1
-                        },
-                        "children": null
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Striders",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "rule": "And",
@@ -44351,13 +44533,45 @@
                 "args": null,
                 "children": [
                     {
-                        "rule": "Has",
+                        "rule": "Or",
                         "options": [],
-                        "args": {
-                            "item_name": "Striders",
-                            "count": 1
-                        },
-                        "children": null
+                        "args": null,
+                        "children": [
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Striders",
+                                    "count": 1
+                                },
+                                "children": null
+                            },
+                            {
+                                "rule": "And",
+                                "options": [],
+                                "args": null,
+                                "children": [
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Sail",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    },
+                                    {
+                                        "rule": "Has",
+                                        "options": [],
+                                        "args": {
+                                            "item_name": "Hairpin",
+                                            "count": 1
+                                        },
+                                        "children": null
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "rule": "And",
@@ -62833,9 +63047,9 @@
         },
         {
             "id": 59,
-            "name": "LQ_under_chall_C3: Top-left corner of the room",
-            "roomId": 262,
-            "roomName": "LQ_under_chall_C3",
+            "name": "striders or glide: Top-left corner of the room",
+            "roomId": -1,
+            "roomName": "",
             "vanillaItem": {
                 "itemId": 87,
                 "itemName": "Old Core (#5)",
@@ -66119,13 +66333,29 @@
                                         "children": null
                                     },
                                     {
-                                        "rule": "Has",
+                                        "rule": "Or",
                                         "options": [],
-                                        "args": {
-                                            "item_name": "Slash",
-                                            "count": 1
-                                        },
-                                        "children": null
+                                        "args": null,
+                                        "children": [
+                                            {
+                                                "rule": "Has",
+                                                "options": [],
+                                                "args": {
+                                                    "item_name": "Slash",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            },
+                                            {
+                                                "rule": "Has",
+                                                "options": [],
+                                                "args": {
+                                                    "item_name": "Sail",
+                                                    "count": 1
+                                                },
+                                                "children": null
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -69947,6 +70177,15 @@
                                         "children": null
                                     }
                                 ]
+                            },
+                            {
+                                "rule": "Has",
+                                "options": [],
+                                "args": {
+                                    "item_name": "Sail",
+                                    "count": 1
+                                },
+                                "children": null
                             }
                         ]
                     }
@@ -79630,7 +79869,7 @@
             "vanillaLocations": [
                 {
                     "locationId": 59,
-                    "locationName": "LQ_under_chall_C3: Top-left corner of the room"
+                    "locationName": "striders or glide: Top-left corner of the room"
                 }
             ]
         },
