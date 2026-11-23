@@ -266,7 +266,7 @@ class Modsanity(Toggle):
     Whether costs of specific trinkets should be randomized. If disabled, all
     options in this section are ignored.
     """
-    display_name = "Modsanity"
+    display_name = "Enable Modsanity"
     default = False
 
 class MixPositiveNegative(Toggle):
@@ -339,6 +339,17 @@ class TotalNegativeModiferCost(NamedRange):
     default = 115
 
 
+class MaximumModifierCost(Range):
+    """
+    The maximum cost of any modifier (positive or negative) if the costs are
+    randomized. Vanilla is 40.
+    """
+
+    display_name = "Maximum Modifier Cost"
+    range_start = 0
+    range_end = 200
+    default = 40
+
 @dataclass
 class MIOOptions(PerGameCommonOptions):
     logic_difficulty: LogicDifficulty
@@ -366,6 +377,7 @@ class MIOOptions(PerGameCommonOptions):
     negative_modifier_count: NegativeModifierCount
     total_positive_modifier_cost: TotalPositiveModiferCost
     total_negative_modifier_cost: TotalNegativeModiferCost
+    maximum_modifier_cost: MaximumModifierCost
 
 mio_option_groups = [
     OptionGroup(
@@ -382,7 +394,7 @@ mio_option_groups = [
     ),
     OptionGroup(
         "Modsanity",
-        [Modsanity, MixPositiveNegative, NegativeModifierCount, TotalPositiveModiferCost, TotalNegativeModiferCost,],
+        [Modsanity, MixPositiveNegative, NegativeModifierCount, TotalPositiveModiferCost, TotalNegativeModiferCost, MaximumModifierCost],
     )
 ]
 

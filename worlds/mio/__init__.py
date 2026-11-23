@@ -75,7 +75,8 @@ class MIOWorld(World):
                   self.options.mix_positive_negative.value,
                   self.options.total_positive_modifier_cost.value,
                   self.options.total_negative_modifier_cost.value,
-                  self.options.negative_modifier_count.value
+                  self.options.negative_modifier_count.value,
+                  self.options.maximum_modifier_cost.value,
               )
 
     def create_items(self) -> None:

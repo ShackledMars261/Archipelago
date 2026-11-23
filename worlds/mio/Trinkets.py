@@ -4,9 +4,7 @@ if typing.TYPE_CHECKING:
 else:
     Random = typing.Any
 
-from random import Random
-r = Random(15)
-def get_trinket_costs(r: Random, mix: bool, pos: int, neg: int, neg_count: int) -> dict[str, int]:
+def get_trinket_costs(r: Random, mix: bool, pos: int, neg: int, neg_count: int, maximum_trinket_cost: int = 40) -> dict[str, int]:
     if mix and pos > -2 and neg > -2:
         if pos < 0 or neg < 0:
             neg_indices = r.sample(range(len(trinkets)), 7)
@@ -20,8 +18,8 @@ def get_trinket_costs(r: Random, mix: bool, pos: int, neg: int, neg_count: int) 
     else:
         pos_trinkets = get_pos_trinkets()
         neg_trinkets = get_neg_trinkets()
-    ps = distribute_costs(r, len(pos_trinkets), pos)
-    ns = distribute_costs(r, len(neg_trinkets), neg)
+    ps = distribute_costs(r, len(pos_trinkets), pos, maximum_trinket_cost)
+    ns = distribute_costs(r, len(neg_trinkets), neg, maximum_trinket_cost)
     out = {}
     for k,v in zip(pos_trinkets, ps):
         out[k] = v
@@ -29,7 +27,7 @@ def get_trinket_costs(r: Random, mix: bool, pos: int, neg: int, neg_count: int) 
         out[k] = -v
     return out
 
-def distribute_costs(r: Random, n : int, total : int) -> list[int]:
+def distribute_costs(r: Random, n : int, total : int, maximum_cost: int = 10000000) -> list[int]:
     if n == 0: return []
     if total == -2:
         if n == len(get_neg_trinkets()): 
@@ -42,9 +40,18 @@ def distribute_costs(r: Random, n : int, total : int) -> list[int]:
             out = get_pos_costs()
         r.shuffle(out)
         return out
-    out = [0] * n
-    for i in range(total):
-        out[r.randint(0, n - 1)] += 1
+    out = []
+    weights = [r.random() for i in range(n)]
+    weights.sort(reverse=True)
+    total_weight = sum(weights)
+    for weight in weights:
+        if weight/total_weight * total + 0.5 > maximum_cost:
+            out.append(maximum_cost)
+            total_weight -= weight
+            total -= maximum_cost
+            continue
+        out.append(int(weight/total_weight * total + 0.5))
+    r.shuffle(out)
     return out
 
 def get_pos_trinkets() -> list[str]:
