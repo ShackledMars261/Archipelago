@@ -284,7 +284,7 @@ class MixPositiveNegative(Toggle):
     default = False
 
 
-class NegativeModifierCount(NamedRange):
+class NegativeModifierCount(Range):
     """
     The number of modifiers which will be given negative costs. Ignored if
     either of "Total Positive Modifer Cost" and "Total Negative Modifier Cost"
@@ -318,7 +318,7 @@ class TotalPositiveModiferCost(NamedRange):
     default = 730
 
 
-class TotalNegativeModiferCost(Range):
+class TotalNegativeModiferCost(NamedRange):
     """
     The negative of the sum of slot costs of all negative modifiers. Vanilla is
     115.
