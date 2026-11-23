@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle, Range
+from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle, Range, NamedRange
 
 
 class BossKillChecks(Toggle):
@@ -284,7 +284,7 @@ class MixPositiveNegative(Toggle):
     default = False
 
 
-class NegativeModifierCount(Range):
+class NegativeModifierCount(NamedRange):
     """
     The number of modifiers which will be given negative costs. Ignored if
     either of "Total Positive Modifer Cost" and "Total Negative Modifier Cost"
@@ -297,7 +297,7 @@ class NegativeModifierCount(Range):
     default = 7
 
 
-class TotalPositiveModiferCost(Range):
+class TotalPositiveModiferCost(NamedRange):
     """
     The modifier slot cost of all positive modifiers. Vanilla is 730 and without
     negative modifiers you can have up to 95 slots.
