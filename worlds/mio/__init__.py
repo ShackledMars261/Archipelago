@@ -54,7 +54,7 @@ class MIOWorld(World):
     location_name_to_id = build_location_name_to_id_dict(data_provider)
 
     trinket_costs = default_trinket_costs()
-    
+
     def create_regions(self) -> None:
         create_and_connect_regions(self)
         create_all_locations(self)
