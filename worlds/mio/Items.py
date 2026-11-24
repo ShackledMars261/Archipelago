@@ -4,6 +4,7 @@ from typing import TYPE_CHECKING
 
 from BaseClasses import Item, ItemClassification
 from worlds.mio.DataProvider import DataProvider, WorldDataItem
+from .Trinkets import ap_name_to_save_flag
 
 if TYPE_CHECKING:
     from . import MIOWorld
@@ -119,6 +120,13 @@ def create_all_items(world: MIOWorld) -> None:
         ]
         for item_name, location_name in STARTING_ITEM_LOCATIONS.items():
             world.get_location(location_name).place_locked_item(world.create_item(item_name))
+    for item in itempool:
+        if not item.name.startswith("Modifier")\
+            or item.name not in ap_name_to_save_flag:
+            continue
+        flag = ap_name_to_save_flag[item.name]
+        if world.trinket_costs[flag] < 0:
+            item.classification &= 0b00001 # progression
 
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))

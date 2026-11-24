@@ -54,7 +54,7 @@ class MIOWorld(World):
     location_name_to_id = build_location_name_to_id_dict(data_provider)
 
     trinket_costs = default_trinket_costs()
-    
+
     def create_regions(self) -> None:
         create_and_connect_regions(self)
         create_all_locations(self)
@@ -75,7 +75,8 @@ class MIOWorld(World):
                   self.options.mix_positive_negative.value,
                   self.options.total_positive_modifier_cost.value,
                   self.options.total_negative_modifier_cost.value,
-                  self.options.negative_modifier_count.value
+                  self.options.negative_modifier_count.value,
+                  self.options.maximum_modifier_cost.value,
               )
 
     def create_items(self) -> None:

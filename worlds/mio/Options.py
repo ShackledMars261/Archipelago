@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle, Range
+from Options import Choice, OptionGroup, PerGameCommonOptions, Toggle, Range, NamedRange
 
 
 class BossKillChecks(Toggle):
@@ -266,7 +266,7 @@ class Modsanity(Toggle):
     Whether costs of specific trinkets should be randomized. If disabled, all
     options in this section are ignored.
     """
-    display_name = "Modsanity"
+    display_name = "Enable Modsanity"
     default = False
 
 class MixPositiveNegative(Toggle):
@@ -297,7 +297,7 @@ class NegativeModifierCount(Range):
     default = 7
 
 
-class TotalPositiveModiferCost(Range):
+class TotalPositiveModiferCost(NamedRange):
     """
     The modifier slot cost of all positive modifiers. Vanilla is 730 and without
     negative modifiers you can have up to 95 slots.
@@ -318,7 +318,7 @@ class TotalPositiveModiferCost(Range):
     default = 730
 
 
-class TotalNegativeModiferCost(Range):
+class TotalNegativeModiferCost(NamedRange):
     """
     The negative of the sum of slot costs of all negative modifiers. Vanilla is
     115.
@@ -338,6 +338,17 @@ class TotalNegativeModiferCost(Range):
     range_end = 2000
     default = 115
 
+
+class MaximumModifierCost(Range):
+    """
+    The maximum cost of any modifier (positive or negative) if the costs are
+    randomized. Vanilla is 40.
+    """
+
+    display_name = "Maximum Modifier Cost"
+    range_start = 0
+    range_end = 200
+    default = 40
 
 @dataclass
 class MIOOptions(PerGameCommonOptions):
@@ -366,6 +377,7 @@ class MIOOptions(PerGameCommonOptions):
     negative_modifier_count: NegativeModifierCount
     total_positive_modifier_cost: TotalPositiveModiferCost
     total_negative_modifier_cost: TotalNegativeModiferCost
+    maximum_modifier_cost: MaximumModifierCost
 
 mio_option_groups = [
     OptionGroup(
@@ -382,7 +394,7 @@ mio_option_groups = [
     ),
     OptionGroup(
         "Modsanity",
-        [Modsanity, MixPositiveNegative, NegativeModifierCount, TotalPositiveModiferCost, TotalNegativeModiferCost,],
+        [Modsanity, MixPositiveNegative, NegativeModifierCount, TotalPositiveModiferCost, TotalNegativeModiferCost, MaximumModifierCost],
     )
 ]
 
